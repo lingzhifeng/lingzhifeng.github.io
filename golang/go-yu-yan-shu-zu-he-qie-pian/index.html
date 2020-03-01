@@ -6,11 +6,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="VIM正则表达式, So Cold , 好冷">
+    <meta name="keywords" content="Go语言数组和切片, So Cold , 好冷">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
-    <meta name="description" content="vim正则表达式Vim中的正则表达式功能很强大，如果能自由运用，则可以完成很多难以想象的操作。如果你比较熟悉Perl的正规表达式，可以直接参照与Perl正则表达式的区别一节。
-使用正则表达式的命令使用正则表达式的命令最常见的就是/**搜索命">
+    <meta name="description" content="数组学习和测试声明数组数组声明用var name [3]int来声明一个名字叫做name的数组，他有3个元素。数组声明中必须要用[n]或者[...]来确定数组内元素数量。[...]表示初始化数组是编译器根据你给的数据自动推导数字的元素数量。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>VIM正则表达式 | So Cold</title>
+    <title>Go语言数组和切片 | So Cold</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -616,13 +615,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        VIM正则表达式
+                        Go语言数组和切片
                     </div>
                 </div>
             </div>
@@ -734,12 +733,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/vim/" target="_blank">
-                                <span class="chip bg-color">vim</span>
+                            <a href="/tags/Go语言/" target="_blank">
+                                <span class="chip bg-color">Go语言</span>
                             </a>
                         
-                            <a href="/tags/正则表达/" target="_blank">
-                                <span class="chip bg-color">正则表达</span>
+                            <a href="/tags/Go语言数组/" target="_blank">
+                                <span class="chip bg-color">Go语言数组</span>
+                            </a>
+                        
+                            <a href="/tags/Go切片/" target="_blank">
+                                <span class="chip bg-color">Go切片</span>
                             </a>
                         
                     </div>
@@ -750,8 +753,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/linux/" class="post-category" target="_blank">
-                                linux
+                            <a href="/categories/golang/" class="post-category" target="_blank">
+                                golang
                             </a>
                         
                     </div>
@@ -762,7 +765,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-19
+                    2020-02-29
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -776,14 +779,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.4k
+                        2.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        9 分
                     </div>
                     
                 
@@ -795,219 +798,126 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="vim正则表达式"><a href="#vim正则表达式" class="headerlink" title="vim正则表达式"></a>vim正则表达式</h2><p>Vim中的正则表达式功能很强大，如果能自由运用，则可以完成很多难以想象的操作。如果你比较熟悉Perl的正规表达式，可以直接参照<a href="http://www.idv2.com/vimwiki/index.php?%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F#perldiff" target="_blank" rel="noopener">与Perl正则表达式的区别</a>一节。</p>
-<h3 id="使用正则表达式的命令"><a href="#使用正则表达式的命令" class="headerlink" title="使用正则表达式的命令"></a>使用正则表达式的命令</h3><p>使用正则表达式的命令最常见的就是<code>/**</code>搜索命令。其格式如下：</p>
-<h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><p>另一个很有用的命令就是<code>:n1,n2s/*/*/gc</code>（替换）命令，将第一个*之间的正则表达式替换成第二个*之间的字符串。</p>
-<p><code>:s/正则表达式/替换字符串/选项</code><br>在学习正则表达式时可以利用<code>/</code>命令来练习。</p>
-<h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><p>元字符是具有特殊意义的字符。使用元字符可以表达任意字符、行首、行 尾、某几个字符等意义。</p>
-<h4 id="元字符一览"><a href="#元字符一览" class="headerlink" title="元字符一览"></a>元字符一览</h4><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>.</code></td>
-<td>匹配任意一个字符</td>
-</tr>
-<tr>
-<td><code>[abc]</code></td>
-<td>匹配方括号中的任意一个字符。可以使用-表示字符范围。</td>
-</tr>
-<tr>
-<td><code>[a-z0-9]</code></td>
-<td>匹配小写字母和阿拉伯数字。</td>
-</tr>
-<tr>
-<td><code>[^abc]</code></td>
-<td>在方括号内开头使用<code>^</code>符号，表示匹配除方括号中字符之外的任意字符。</td>
-</tr>
-<tr>
-<td><code>\d</code></td>
-<td>匹配阿拉伯数字，等同于<code>[0-9]</code>。</td>
-</tr>
-<tr>
-<td><code>\D</code></td>
-<td>匹配阿拉伯数字之外的任意字符，等同于<code>[^0-9]</code>。</td>
-</tr>
-<tr>
-<td><code>\x</code></td>
-<td>匹配十六进制数字，等同于<code>[0-9A-Fa-f]</code>。</td>
-</tr>
-<tr>
-<td><code>\X</code></td>
-<td>匹配十六进制数字之外的任意字符，等同于<code>[^0-9A-Fa-f]</code>。</td>
-</tr>
-<tr>
-<td><code>\w</code></td>
-<td>匹配单词字母，等同于<code>[0-9A-Za-z_]</code>。</td>
-</tr>
-<tr>
-<td><code>\W</code></td>
-<td>匹配单词字母之外的任意字符，等同于<code>[^0-9A-Za-z_]</code>。</td>
-</tr>
-<tr>
-<td><code>\t</code></td>
-<td>匹配<kbd>TAB</kbd>字符。</td>
-</tr>
-<tr>
-<td><code>\s</code></td>
-<td>匹配空白字符，等同于<code>[\t]</code>。</td>
-</tr>
-<tr>
-<td><code>\S</code></td>
-<td>匹配非空白字符，等同于<code>[^\t]</code>。</td>
-</tr>
-</tbody></table>
-<p>另外，如果要查找字符<code>*、.、/</code>等，则需要在前面用<code>\</code>符号，表示这不是元字符，而只是普通字符而已。</p>
-<table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>\*</code></td>
-<td>匹配<code>*</code>字符。</td>
-</tr>
-<tr>
-<td><code>\.</code></td>
-<td>匹配<code>.</code>字符。</td>
-</tr>
-<tr>
-<td><code>\/</code></td>
-<td>匹配<code>/</code>字符。</td>
-</tr>
-<tr>
-<td><code>\\</code></td>
-<td>匹配<code>\</code>字符。</td>
-</tr>
-<tr>
-<td><code>\[</code></td>
-<td>匹配<code>[</code>字符。</td>
-</tr>
-</tbody></table>
-<h5 id="表示数量的元字符"><a href="#表示数量的元字符" class="headerlink" title="表示数量的元字符"></a>表示数量的元字符</h5><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>*</code></td>
-<td>匹配<code>0-任意</code>个</td>
-</tr>
-<tr>
-<td><code>\+</code></td>
-<td>匹配<code>1-任意</code>个</td>
-</tr>
-<tr>
-<td><code>\?</code></td>
-<td>匹配<code>0-1</code>个</td>
-</tr>
-<tr>
-<td><code>\{n,m}</code></td>
-<td>匹配<code>n-m</code>个</td>
-</tr>
-<tr>
-<td><code>\{n}</code></td>
-<td>匹配<code>n</code>个</td>
-</tr>
-<tr>
-<td><code>\{n,}</code></td>
-<td>匹配<code>n-任意</code></td>
-</tr>
-<tr>
-<td><code>\{,m}</code></td>
-<td>匹配<code>0-m个</code></td>
-</tr>
-</tbody></table>
-<h5 id="表示位置的符号"><a href="#表示位置的符号" class="headerlink" title="表示位置的符号"></a>表示位置的符号</h5><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>$</code></td>
-<td>匹配行尾</td>
-</tr>
-<tr>
-<td><code>^</code></td>
-<td>匹配行首</td>
-</tr>
-<tr>
-<td><code>\&lt;</code></td>
-<td>匹配单词词首</td>
-</tr>
-<tr>
-<td><code>\&gt;</code></td>
-<td>匹配单词词尾</td>
-</tr>
-</tbody></table>
-<h5 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h5><p><code>/char\s\+[A-Za-z_]\w*;</code><br><strong>查找所有以char开头，之后是一个以上的空白，最后是一个标识符和分号。</strong></p>
-<p><code>/\d\d:\d\d:\d\d</code><br><strong>查找如17:37:01格式的时间字符串</strong></p>
-<p><code>:g/^\s*$/d</code><br><strong>删除只有空白的行</strong></p>
-<p><code>:s/\&lt;four\&gt;/4/g</code><br><strong>将所有的four替换成4，但是fourteen中的four不替换</strong></p>
-<h3 id="替换变量"><a href="#替换变量" class="headerlink" title="替换变量"></a>替换变量</h3><p>在正规表达式中使用<code>\(</code>和<code>\)</code>符号括起正规表达式，即可在后面使用<code>\1</code>、<code>\2</code>等变量来访问<code>\(</code>和<code>\)</code>中的内容。</p>
-<h4 id="替换变量实例："><a href="#替换变量实例：" class="headerlink" title="替换变量实例："></a>替换变量实例：</h4><p><code>/\(a\+\)[^a]\+\1</code><br><strong>查找开头和结尾处a的个数相同的字符串，如aabbbaa，aaacccaaa，但是不匹配abbbaa</strong></p>
-<p><code>:s/\(http:\/\/[-a-z\._~\+%\/]\+\)/&lt;a href="\1"&gt;\1&lt;\/a&gt;/</code><br><strong>将URL替换为</strong><code>&lt;a href="http://url"&gt;http://url&lt;/a&gt;</code><strong>的格式</strong></p>
-<p><code>:s/\(\w\+\)\s\+\(\w\+\)/\2\t\1</code><br><strong>将data1，data2 修改为data2，data1</strong></p>
-<h3 id="函数式"><a href="#函数式" class="headerlink" title="函数式"></a>函数式</h3><p>在替换命令<code>:n1,n2s/*/#/</code>中可以使用函数表达式来书写替换内容，格式为:</p>
-<p><strong>:s/替换字符串/=函数式</strong></p>
-<p>在函数式中可以使用<code>submatch(1)</code>、<code>submatch(2)</code>等来引用<code>\1</code>、<code>\2</code>等的内容，而<code>submatch(0)</code>可以引用匹配的整个内容。</p>
-<h5 id="函数式实例"><a href="#函数式实例" class="headerlink" title="函数式实例"></a>函数式实例</h5><p><code>:%s/\&lt;id\&gt;/\=line(".")</code><br><strong>将各行的id字符串替换为行号</strong></p>
-<p><code>:%s/^\&lt;\w\+\&gt;/\=(line(".")-10) .".". submatch(1)</code><br><strong>将每行开头的单词替换为(行号-10).单词的格式，如第11行的</strong><code>word</code><strong>替换成</strong><code>1. word</code></p>
-<h3 id="与Perl正则表达式的区别"><a href="#与Perl正则表达式的区别" class="headerlink" title="与Perl正则表达式的区别"></a>与Perl正则表达式的区别</h3><p>元字符的区别</p>
-<table>
-<thead>
-<tr>
-<th>Vim语法</th>
-<th>Perl语法</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>\+</code></td>
-<td><code>+</code></td>
-<td><code>1-任意个</code></td>
-</tr>
-<tr>
-<td><code>\?</code></td>
-<td><code>?</code></td>
-<td><code>0-1个</code></td>
-</tr>
-<tr>
-<td><code>\{n,m}</code></td>
-<td><code>{n,m}</code></td>
-<td><code>n-m个</code></td>
-</tr>
-<tr>
-<td><code>\(</code>和<code>\)</code></td>
-<td><code>(和)</code></td>
-<td><code>分组</code></td>
-</tr>
-</tbody></table>
-<h3 id="vi-正则表达式练习"><a href="#vi-正则表达式练习" class="headerlink" title="vi 正则表达式练习"></a>vi 正则表达式练习</h3><p>闲言碎语不要讲…例子说明一切，比如下面这段我需要换成<code>ubb</code>标签</p>
-<p>vim命令模式，输入:</p>
-<p><code>:%s/.*src=”([^"]*)”[^&gt;]*&gt;/[img]1[/img]/g</code></p>
-<p>替换为<br><code>[img ]gu.jpg[ /img]</code><br><code>[img ]os.jpg[ /img]</code><br><code>[img ]hu.jpg[ /img]</code><br><code>[img ]ang.jpg[ /img]</code></p>
-<p>解释如下：</p>
-<p><code>:</code><br><strong>命令执行状态</strong></p>
-<p><code>%s</code><br><strong>表示查找并替换</strong></p>
-<p><code>%s/a/b/g</code><br><strong>a被查找的字符串（正则匹配）；b要替换成的文字；g表示全局搜索替换（否则只处理找到的第一个结果）</strong></p>
-<p><code>([^"]*)</code><br><strong>表示非引号的字符N个；外面()表示后面替换要用（用1,…,9等引用）</strong></p>
-<p><code>[/img]</code><br><strong>/需要被转义</strong></p>
-<p>与其它工具正则不一样的地方在于<code>()</code>也必须<code>()</code>，怪不得我老是弄不出来。</p>
+                <h2 id="数组学习和测试"><a href="#数组学习和测试" class="headerlink" title="数组学习和测试"></a>数组学习和测试</h2><h3 id="声明数组"><a href="#声明数组" class="headerlink" title="声明数组"></a>声明数组</h3><p>数组声明用<code>var name [3]int</code>来声明一个名字叫做<code>name</code>的数组，他有3个元素。数组声明中必须要用<code>[n]</code>或者<code>[...]</code>来确定数组内元素数量。<code>[...]</code>表示初始化数组是编译器根据你给的数据自动推导数字的元素数量。记住，数组必须要有元素数量，而且元素数量不能更改。不同元素数量的数组是两个数据类型，比如<code>[3]int</code>和<code>[4]int</code>是两个数据类型，好比<code>int</code>和<code>string</code>一样不能相互做逻辑运算。</p>
+<h3 id="数组定义"><a href="#数组定义" class="headerlink" title="数组定义"></a>数组定义</h3><p>声明数组的格式是：<br><code>var 数组名字 [元素数量] 数组类型</code>。</p>
+<h3 id="数组初始化"><a href="#数组初始化" class="headerlink" title="数组初始化"></a>数组初始化</h3><p>初始化一个数组可以用下面的代码来声明并初始化名字是<code>name</code>的数组，他有两个元素<code>"铁锤"</code>和<code>"钢蛋"</code>。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token builtin">string</span> <span class="token punctuation">{</span><span class="token string">"铁锤"</span><span class="token punctuation">,</span><span class="token string">"钢蛋"</span><span class="token punctuation">}</span></code></pre>
+<p>或者用</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">}</span></code></pre>
+<p>来声明一个由编译器自动推导出有3个元素的数组<code>name</code>。还可以用</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token string">"铁柱"</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">:</span><span class="token string">"钢蛋"</span><span class="token punctuation">}</span></code></pre>
+<p>来指定数组<code>name</code>的第<code>0</code>个元素保存<code>铁柱</code>，第<code>5</code>个元素保存<code>铁柱</code>来初始化数组。当然也可以用</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token builtin">int</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">}</span></code></pre>
+<p>这种简写方式声明并初始化数组。</p>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><p>你可以用如下方法创建一个二维数组：</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span>
+    <span class="token punctuation">{</span><span class="token string">"铁蛋"</span><span class="token punctuation">,</span> <span class="token string">"xiaoming"</span><span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span><span class="token string">"钢锤"</span><span class="token punctuation">,</span> <span class="token string">"laobain"</span><span class="token punctuation">,</span> <span class="token string">"2B"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre>
+<p>或者：</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span>
+    <span class="token punctuation">{</span><span class="token string">"铁蛋"</span><span class="token punctuation">,</span> <span class="token string">"xiaoming"</span><span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span><span class="token string">"钢锤"</span><span class="token punctuation">,</span> <span class="token string">"laobain"</span><span class="token punctuation">,</span> <span class="token string">"2B"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre>
+<p>如果用自动推导元素数量的方式需要注意，编译器只能自动推导第一层的元素数量。用<code>name := [...][...]string{}</code>编译器直接报错，因为编译器只能推导第一层的<code>[...]</code>第二个中括号<code>[]</code>内必须明确的给定元素数量。</p>
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><p>数组遍历一般推荐用<code>for i,zhi := range name {}</code>来遍历数组，<code>i</code>取得数字<code>name</code>的索引，<code>zhi</code>取得数组<code>name</code>的数据。或者也可以用<code>for i:=0; i&lt;=9; i++{}</code>来遍历数组。</p>
+<p>另外数组是值引用类型，因此赋值和传参数不会改变原数组的值。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"铁蛋"</span><span class="token punctuation">,</span> <span class="token string">"xiaoming"</span><span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">}</span>
+name1 <span class="token operator">:=</span> name
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v\n数组name1:%v\n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name1<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"------------------------------"</span><span class="token punctuation">)</span>
+name1<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"柱子"</span> <span class="token comment" spellcheck="true">//修改name1并不影响name</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v\n数组name1:%v\n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name1<span class="token punctuation">)</span></code></pre>
+<p>再另外：<code>[n]*T</code>表示指针数组，<code>*[n]T</code>表示数组指针 。</p>
+<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>切片是基于数组做的封装，切片长度可变。声明切片是不需要在’[]’中定义元素数量。切片是引用类型，也就是说对切片进行操作，会改变底层数组的数据。</p>
+<h3 id="切片定义"><a href="#切片定义" class="headerlink" title="切片定义"></a>切片定义</h3><pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> 切片名字 <span class="token punctuation">[</span><span class="token punctuation">]</span>类型</code></pre>
+<p>可以使用内置函数<code>len()</code>取得切片长度，用内置函数<code>cap()</code>取得切片容量。</p>
+<h3 id="基于数组定义切片"><a href="#基于数组定义切片" class="headerlink" title="基于数组定义切片"></a>基于数组定义切片</h3><p>为数组<code>name</code>创建切片：</p>
+<pre class=" language-go"><code class="language-go">qiepian <span class="token operator">:=</span> name <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span></code></pre>
+<p>基于数组<code>name</code>的切片<code>qiepian</code>。切片的数据是数字<code>name</code>的第1个元素开始到第四个元素之前结束。左开右闭原则，<code>name[1:4]</code>的意思说明左边数字<code>1</code>的元素到右边数字索引<code>4</code>之前的元素。当然你还可以对切片再次切片<code>qiepian1:=qiepian[:2]</code>。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"dd"</span><span class="token punctuation">,</span> <span class="token string">"ee"</span><span class="token punctuation">}</span>
+qiepian <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">//切片'qiepian'是基于数组'name'的切片</span>
+qiepian1 <span class="token operator">:=</span> qiepian<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">//切片1'qiepian1'也是基于数组'name'的切片。</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>基于数组的切片如果超出原数组的长度<code>qiepian:=name[1:6]</code>编译器会报如下错误：</p>
 <blockquote>
-<p>相关资料：<br><a href="http://net.pku.edu.cn/~yhf/tao_regexps_zh.html" target="_blank" rel="noopener">via</a>:<a href="http://net.pku.edu.cn/~yhf/tao_regexps_zh.html" target="_blank" rel="noopener">http://net.pku.edu.cn/~yhf/tao_regexps_zh.html</a></p>
+<p>invalid slice index 6 (out of bounds for 5-element array)</p>
 </blockquote>
-<p>简单命令:</p>
-<p><code>:%s/ */ /g</code>---把一个或者多个空格替换为一个空格。<br><code>:%s/ *$//</code>---去掉行尾的所有空格。<br><code>:%s/^/ /</code>---在每一行头上加入一个空格。<br><code>:%s/^[0-9][0-9]* //</code>---去掉行首的所有数字字符。<br><code>:%s/b[aeio]g/bug/g</code>---将所有的bag、beg、big和bog改为bug。<br><code>:%s/t([aou])g/h1t/g</code>---将所有tag、tog和tug分别改为hat、hot和hug（注意用group的用法和使用1引用前面被匹配的字符）。</p>
+<p>如果切片<code>qiepian1</code>超出<code>qiepian</code>的长度译器会识别出来么？答案是不会，嘿嘿，虽然它爹是谷歌。编译是识别不出来，但是运行是会报错，比如修改为<code>qiepian1 := qiepian[1:5]</code>编译没问题，但是运行是会报错：</p>
+<blockquote>
+<p>panic: runtime error: slice bounds out of range [:5] wit<br>goroutine 1 [running]:main.main()<br>/data/data/com.termux/files/home/go/src/socold.com/soc<br>exit status 2</p>
+</blockquote>
+<p>修改切片<code>qiepian[2]</code>的数据。也就是修改底层数组<code>name</code>的数据。因为切片的值是引用类型，而且<code>qiepian</code>和<code>qiepian2</code>都是基于数组<code>name</code>。所以修改<code>qiepian[2]</code>的数据，就是修改底层数组<code>name</code>的数据。既然底层数组<code>name</code>的数据修改了，那么基于数组<code>name</code>的两个切片<code>qiepian</code>和<code>qiepian1</code>显示出来的数据都该改变。下面输出已然证实结论。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"dd"</span><span class="token punctuation">,</span> <span class="token string">"ee"</span><span class="token punctuation">}</span>
+qiepian <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">//切片'qiepian'是基于数组'name'的切片</span>
+qiepian1 <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">//切片1'qiepian1'也是基于数组'name'的切片。</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">//修改切片'qiepian[2]'的数据。</span>
+qiepian<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"gg"</span><span class="token punctuation">)</span> 
+
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>同理，对切片的在切片修改数据一样的道理，会修改底层数组<code>name</code>。上面代码把<code>qiepian1:=name[1:4]</code>改成<code>qiepian1:=qiepian[1:4]</code>效果一样滴。</p>
+<p>用<code>append(qiepian,"mm")</code>来为切片<code>qiepian</code>添加一个元素<code>mm</code>时，如果原数组<code>name</code>容量够用，会直接修改数组<code>name</code>的数据，并为切片<code>qiepian</code>扩大一个容量。底层还是原数组<code>name</code>。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"dd"</span><span class="token punctuation">,</span> <span class="token string">"ee"</span><span class="token punctuation">}</span>
+qiepian <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true">//切片'qiepian'是基于数组'name'的切片</span>
+qiepian1 <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">//切片1'qiepian1'也是基于数组'name'的切片。</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">//原数组'name'容量够用的话直接添加元素。</span>
+qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> <span class="token string">"mm"</span><span class="token punctuation">)</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"'qiepian'添加元素'mm'"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>如果添加元素时，原数组容量不够，那就为切片<code>qiepian</code>重新造一个数组。比如下面代码，为切片<code>qiepian</code>添加两个元素是，原数组容量肯定不够用。我们又修改了切片<code>qiepian1[0]</code>的数据为<code>AA</code>，输出显示切片<code>qiepian1</code>的底层数组还是<code>name</code>，因为下面三组数据只有数组<code>name</code>和切片<code>qiepian1</code>的数据改变了，切片<code>qiepian</code>的数据并没有发生变化，所以，系统为切片<code>qiepian</code>重新造了一个新的底层数组。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"dd"</span><span class="token punctuation">,</span> <span class="token string">"ee"</span><span class="token punctuation">}</span>
+qiepian <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>  <span class="token comment" spellcheck="true">//切片'qiepian'是基于数组'name'的切片</span>
+qiepian1 <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">//切片1'qiepian1'也是基于数组'name'的切片。</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true">//现在肯定超出原数组'name'的容量了。</span>
+qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> <span class="token string">"mm"</span><span class="token punctuation">)</span>
+qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> <span class="token string">"zz"</span><span class="token punctuation">)</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"'qiepian'添加元素'mm'"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+qiepian1<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"AA"</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"修改'qiepian1[0]'的数据为'AA'"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"----------------------------------------"</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1176,7 +1086,7 @@
                     </span>
                     <a href="https://lingzhifeng.github.io" class="b-link-green">So Cold</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/linux/vim-zheng-ze-biao-da-shi/" class="b-link-green">VIM正则表达式</a>
+                    <a href="/golang/go-yu-yan-shu-zu-he-qie-pian/" class="b-link-green">Go语言数组和切片</a>
                 </p>
             </div>
 
@@ -1199,7 +1109,7 @@
         repo: 'shw2018.github.io',
         owner: 'shw2018',
         admin: ["shw2018"],
-        id: 'linux/vim-zheng-ze-biao-da-shi/',
+        id: 'golang/go-yu-yan-shu-zu-he-qie-pian/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1522,6 +1432,85 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/ji-jin/chen-xing-ji-jin-ping-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="晨星基金评级">
+                        
+                        <span class="card-title">晨星基金评级</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            晨星基金评级
+
+
+代码
+名称
+分类
+三年
+五年
+回报
+
+
+
+519674
+银河创新成长混合
+激进
+五星
+四星
+47.90
+
+
+000751
+嘉实新兴产业股票
+股票
+五星
+五星
+18.57
+
+
+161903
+万家行业优选混合 (LOF)
+激进
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/基金/" class="post-category" target="_blank">
+                                    基金
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/基金/" target="_blank">
+                        <span class="chip bg-color">基金</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/golang/spacevim-guan-fang-wen-dang/">
                     <div class="card-image">
                         
@@ -1542,9 +1531,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1574,84 +1563,6 @@
                     
                     <a href="/tags/go语言开发环境/" target="_blank">
                         <span class="chip bg-color">go语言开发环境</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/golang/go-yu-yan-zhan-wei-fu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="go语言占位符">
-                        
-                        <span class="card-title">go语言占位符</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            在这里按照占位符将被替换的变量类型划分，更方便查询和记忆。
-General（通用占位符）
-
-
-占位符
-说明
-
-
-
-%v
-以默认的方式打印变量的值
-
-
-%T
-打印变量的类型
-
-
-%%
-字面上的百分号，并非值的占位符
-
-
-Integer（整型）
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/golang/" class="post-category" target="_blank">
-                                    golang
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/golang/" target="_blank">
-                        <span class="chip bg-color">golang</span>
-                    </a>
-                    
-                    <a href="/tags/go语言/" target="_blank">
-                        <span class="chip bg-color">go语言</span>
-                    </a>
-                    
-                    <a href="/tags/go语言占位符/" target="_blank">
-                        <span class="chip bg-color">go语言占位符</span>
                     </a>
                     
                 </div>

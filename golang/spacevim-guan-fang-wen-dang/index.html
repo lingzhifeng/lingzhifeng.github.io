@@ -11,7 +11,9 @@
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
     <meta name="description" content="描述该层用于golang开发。 它还提供了其他特定于语言的键映射。
 安装要使用此配置层，请使用以下命令更新自定义配置文件：
-[[layers]]  name = “lang#go”After the installation, run :G">
+[[layers]]
+  name = &#34;lang#go&#34;
+安装后，在vim中运行：GoInstallBinarie">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -785,14 +787,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        290
+                        519
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -806,12 +808,170 @@
             <div id="articleContent">
                 <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>该层用于golang开发。 它还提供了其他特定于语言的键映射。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>要使用此配置层，请使用以下命令更新自定义配置文件：</p>
-<p>[[layers]]<br>  name = “lang#go”<br>After the installation, run :GoInstallBinaries inside vim.</p>
-<p>To enable tagbar support, you need to install gotags:</p>
-<p>go get -u github.com/jstemmer/gotags<br>Features<br>auto-completion<br>syntax checking<br>goto definition<br>refernce finder<br>Key bindings<br>Import key bindings:</p>
-<p>Key Bindings    Descriptions<br>SPC l a    go alternate<br>SPC l b    go build<br>SPC l c    go coverage<br>SPC l d    go doc<br>SPC l D    go doc vertical<br>SPC l e    go rename<br>SPC l g    go definition<br>SPC l G    go generate<br>SPC l h    go info<br>SPC l i    go implements<br>SPC l I    implement stubs<br>SPC l k    add tags<br>SPC l K    remove tags<br>SPC l l    list declarations in file<br>SPC l m    format imports<br>SPC l M    add import<br>SPC l r    go run<br>SPC l s    fill struct<br>SPC l t    go test<br>SPC l v    freevars<br>SPC l x    go referrers<br>Code formatting:</p>
-<p>the default key bindings for format current buffer is SPC b f, and this key bindings is defined in format layer. You can also use g= to indent current buffer.</p>
-<p>To make neoformat support go files, you should have go-fmt command available, or<br>install goimports. go-fmt is delivered by golang’s default installation, so make sure you have correctly setup your go environment.</p>
+<pre class=" language-yml"><code class="language-yml">[[layers]]
+  name = "lang#go"</code></pre>
+<p>安装后，在vim中运行：<code>GoInstallBinaries</code>。<br>要启用标签栏支持，您需要安装<a href="https://github.com/jstemmer/gotags" target="_blank" rel="noopener">gotags</a>：</p>
+<pre><code>go get -u github.com/jstemmer/gotags</code></pre><h2 id="特征"><a href="#特征" class="headerlink" title="特征"></a>特征</h2><ul>
+<li>自动完成</li>
+<li>语法检查</li>
+<li>转到定义</li>
+<li>参考查找器</li>
+</ul>
+<h2 id="键绑定"><a href="#键绑定" class="headerlink" title="键绑定"></a>键绑定</h2><p><strong>导入键绑定：</strong></p>
+<table>
+<thead>
+<tr>
+<th><code>Key Bindings</code></th>
+<th><code>Descriptions</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SPC c l</code></td>
+<td><code>注释或取消注释当前行</code></td>
+</tr>
+<tr>
+<td>`SCP c p/P</td>
+<td><code>注释或取消注释当前段落(上下空行之间的算段落)</code></td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td><code>撤销上一步操作</code></td>
+</tr>
+<tr>
+<td><kbd>Ctrl</kbd>+<kbd>p</kbd></td>
+<td><code>代码补全</code></td>
+</tr>
+<tr>
+<td><code>z</code> <code>.</code></td>
+<td><code>光标行处于屏幕中间</code></td>
+</tr>
+<tr>
+<td><code>z</code> <code>-</code></td>
+<td><code>光标行处于屏幕最底</code></td>
+</tr>
+<tr>
+<td><code>z</code> <code>回车</code></td>
+<td><code>光标行处于屏幕顶部</code></td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td><code>下一个单词首字母</code></td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td><code>上一个单词首字母</code></td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td><code>当前单词尾字母</code></td>
+</tr>
+<tr>
+<td><code>SPC w F</code></td>
+<td><code>新建标签</code></td>
+</tr>
+<tr>
+<td><code>SPC t t</code></td>
+<td><code>打开标签管理器</code></td>
+</tr>
+<tr>
+<td><code>SPC w o</code></td>
+<td><code>切换标签</code></td>
+</tr>
+<tr>
+<td><code>g d</code></td>
+<td><code>转到函数定义</code></td>
+</tr>
+<tr>
+<td><code>g 0</code></td>
+<td><code>跳到第一个标签</code></td>
+</tr>
+<tr>
+<td><code>SPC l a</code></td>
+<td><code>go alternate</code></td>
+</tr>
+<tr>
+<td><code>SPC l b</code></td>
+<td><code>go build</code></td>
+</tr>
+<tr>
+<td><code>SPC l c</code></td>
+<td><code>go coverage</code></td>
+</tr>
+<tr>
+<td><code>SPC l d</code></td>
+<td><code>go doc</code></td>
+</tr>
+<tr>
+<td><code>SPC l D</code></td>
+<td><code>go doc vertical</code></td>
+</tr>
+<tr>
+<td><code>SPC l e</code></td>
+<td><code>go rename</code></td>
+</tr>
+<tr>
+<td><code>SPC l g</code></td>
+<td><code>go definition</code></td>
+</tr>
+<tr>
+<td><code>SPC l G</code></td>
+<td><code>go generate</code></td>
+</tr>
+<tr>
+<td><code>SPC l h</code></td>
+<td><code>go info</code></td>
+</tr>
+<tr>
+<td><code>SPC l i</code></td>
+<td><code>go implements</code></td>
+</tr>
+<tr>
+<td><code>SPC l I</code></td>
+<td><code>implement stubs</code></td>
+</tr>
+<tr>
+<td><code>SPC l k</code></td>
+<td><code>add tags</code></td>
+</tr>
+<tr>
+<td><code>SPC l K</code></td>
+<td><code>remove tags</code></td>
+</tr>
+<tr>
+<td><code>SPC l l</code></td>
+<td><code>list declarations in file</code></td>
+</tr>
+<tr>
+<td><code>SPC l m</code></td>
+<td><code>format imports</code></td>
+</tr>
+<tr>
+<td><code>SPC l M</code></td>
+<td><code>add import</code></td>
+</tr>
+<tr>
+<td><code>SPC l r</code></td>
+<td><code>go run</code></td>
+</tr>
+<tr>
+<td><code>SPC l s</code></td>
+<td><code>fill struct</code></td>
+</tr>
+<tr>
+<td><code>SPC l t</code></td>
+<td><code>go test</code></td>
+</tr>
+<tr>
+<td><code>SPC l v</code></td>
+<td><code>freevars</code></td>
+</tr>
+<tr>
+<td><code>SPC l x</code></td>
+<td><code>go referrers</code></td>
+</tr>
+</tbody></table>
+<h3 id="代码格式："><a href="#代码格式：" class="headerlink" title="代码格式："></a>代码格式：</h3><p>格式当前缓冲区的默认键绑定为<code>SPC b f</code>，并且此键绑定在<code>格式层</code>中定义。 您也可以使用<code>g =</code>缩进当前缓冲区。</p>
+<p>要使新格式支持go文件，您应该具有<a href="http://golang.org/cmd/gofmt/" target="_blank" rel="noopener">go-fmt</a>命令，或者安装<a href="https://godoc.org/golang.org/x/tools/cmd/goimports" target="_blank" rel="noopener">goimports</a>。<code>go-fmt</code>由golang的默认安装提供，因此请确保已正确设置go环境。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -978,7 +1138,7 @@
                     <span class="reprint1-tip">
                         <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
                     </span>
-                    <a href="http://localhost:4000" class="b-link-green">So Cold</a>
+                    <a href="https://lingzhifeng.github.io" class="b-link-green">So Cold</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
                     <a href="/golang/spacevim-guan-fang-wen-dang/" class="b-link-green">SpaceVim官方文档</a>
                 </p>
@@ -1322,32 +1482,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/golang/spacevim-guan-fang-wen-dang/">
+                <a href="/golang/go-yu-yan-shu-zu-he-qie-pian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpaceVim官方文档">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Go语言数组和切片">
                         
-                        <span class="card-title">SpaceVim官方文档</span>
+                        <span class="card-title">Go语言数组和切片</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            描述该层用于golang开发。 它还提供了其他特定于语言的键映射。
-安装要使用此配置层，请使用以下命令更新自定义配置文件：
-[[layers]]  name = “lang#go”After the installation, run :G
+                            数组学习和测试声明数组数组声明用var name [3]int来声明一个名字叫做name的数组，他有3个元素。数组声明中必须要用[n]或者[...]来确定数组内元素数量。[...]表示初始化数组是编译器根据你给的数据自动推导数字的元素数量。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-29
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1360,24 +1517,19 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/golang/" target="_blank">
-                        <span class="chip bg-color">golang</span>
+                    <a href="/tags/Go语言/" target="_blank">
+                        <span class="chip bg-color">Go语言</span>
                     </a>
                     
-                    <a href="/tags/SpaceVim/" target="_blank">
-                        <span class="chip bg-color">SpaceVim</span>
+                    <a href="/tags/Go语言数组/" target="_blank">
+                        <span class="chip bg-color">Go语言数组</span>
                     </a>
                     
-                    <a href="/tags/vim开发环境/" target="_blank">
-                        <span class="chip bg-color">vim开发环境</span>
-                    </a>
-                    
-                    <a href="/tags/go语言开发环境/" target="_blank">
-                        <span class="chip bg-color">go语言开发环境</span>
+                    <a href="/tags/Go切片/" target="_blank">
+                        <span class="chip bg-color">Go切片</span>
                     </a>
                     
                 </div>
@@ -1595,7 +1747,7 @@
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">24.3k</span> 字
+                <span class="white-color">27.7k</span> 字
             
 
             

@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:4000/golang/gocui-zhong-wen-wen-dang/</loc>
+    <loc>https://lingzhifeng.github.io/ji-jin/chen-xing-ji-jin-ping-ji/</loc>
+    <lastmod>2020-03-01</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</loc>
+    <lastmod>2020-03-01</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/</loc>
+    <lastmod>2020-02-25</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/linux/vim-zheng-ze-biao-da-shi/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
-    <loc>http://localhost:4000/hexo/markdow-yu-fa-jiao-cheng/</loc>
+    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-zhan-wei-fu/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
-    <loc>http://localhost:4000/golang/spacevim-guan-fang-wen-dang/</loc>
+    <loc>https://lingzhifeng.github.io/hexo/hexo-github-da-jian-jiao-cheng/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
-    <loc>http://localhost:4000/golang/go-yu-yan-zhan-wei-fu/</loc>
+    <loc>https://lingzhifeng.github.io/hexo/markdow-yu-fa-jiao-cheng/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
-    <loc>http://localhost:4000/hexo/hexo-github-da-jian-jiao-cheng/</loc>
-    <lastmod>2020-02-19</lastmod>
-  </url>  <url>
-    <loc>http://localhost:4000/linux/vim-zheng-ze-biao-da-shi/</loc>
+    <loc>https://lingzhifeng.github.io/golang/gocui-zhong-wen-wen-dang/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>
 </urlset>

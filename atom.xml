@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>So Cold</title>
+  
+  <subtitle>So Cold</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://localhost:4000/"/>
+  <updated>2020-02-19T17:42:27.759Z</updated>
+  <id>http://localhost:4000/</id>
+  
+  <author>
+    <name>So Cold</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpaceVim官方文档</title>
+    <link href="http://localhost:4000/golang/spacevim-guan-fang-wen-dang/"/>
+    <id>http://localhost:4000/golang/spacevim-guan-fang-wen-dang/</id>
+    <published>2020-02-19T17:26:21.000Z</published>
+    <updated>2020-02-19T17:42:27.759Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h2&gt;&lt;p&gt;该层用于golang开发。 它还提供了其他特定于语言的键映射。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="http://localhost:4000/categories/golang/"/>
+    
+    
+      <category term="golang" scheme="http://localhost:4000/tags/golang/"/>
+    
+      <category term="SpaceVim" scheme="http://localhost:4000/tags/SpaceVim/"/>
+    
+      <category term="vim开发环境" scheme="http://localhost:4000/tags/vim%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="go语言开发环境" scheme="http://localhost:4000/tags/go%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VIM正则表达式</title>
+    <link href="http://localhost:4000/linux/vim-zheng-ze-biao-da-shi/"/>
+    <id>http://localhost:4000/linux/vim-zheng-ze-biao-da-shi/</id>
+    <published>2020-02-19T15:42:04.000Z</published>
+    <updated>2020-02-19T16:50:59.829Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;vim正则表达式&quot;&gt;&lt;a href=&quot;#vim正则表达式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://localhost:4000/categories/linux/"/>
+    
+    
+      <category term="vim" scheme="http://localhost:4000/tags/vim/"/>
+    
+      <category term="正则表达" scheme="http://localhost:4000/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go语言占位符</title>
+    <link href="http://localhost:4000/golang/go-yu-yan-zhan-wei-fu/"/>
+    <id>http://localhost:4000/golang/go-yu-yan-zhan-wei-fu/</id>
+    <published>2020-02-18T17:22:37.000Z</published>
+    <updated>2020-02-19T17:37:30.019Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在这里按照占位符将被替换的变量类型划分，更方便查询和记忆。&lt;/p&gt;
+&lt;h2 id=&quot;General（通用占位符）&quot;&gt;&lt;a href=&quot;#General（通用占位符）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="http://localhost:4000/categories/golang/"/>
+    
+    
+      <category term="golang" scheme="http://localhost:4000/tags/golang/"/>
+    
+      <category term="go语言" scheme="http://localhost:4000/tags/go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="go语言占位符" scheme="http://localhost:4000/tags/go%E8%AF%AD%E8%A8%80%E5%8D%A0%E4%BD%8D%E7%AC%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Github搭建教程</title>
+    <link href="http://localhost:4000/hexo/hexo-github-da-jian-jiao-cheng/"/>
+    <id>http://localhost:4000/hexo/hexo-github-da-jian-jiao-cheng/</id>
+    <published>2020-02-15T10:27:20.000Z</published>
+    <updated>2020-02-19T17:30:14.249Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Hexo和Github的搭建&quot;&gt;&lt;a href=&quot;#Hexo和Github的搭建&quot; class=&quot;headerlink&quot; title=&quot;Hexo和Github的搭建&quot;&gt;&lt;/a&gt;Hexo和Github的搭建&lt;/h2&gt;&lt;p&gt;hexo的初级搭建还有部署到github
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://localhost:4000/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://localhost:4000/tags/Hexo/"/>
+    
+      <category term="Github" scheme="http://localhost:4000/tags/Github/"/>
+    
+      <category term="blog" scheme="http://localhost:4000/tags/blog/"/>
+    
+      <category term="免费博客" scheme="http://localhost:4000/tags/%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gocui中文文档</title>
+    <link href="http://localhost:4000/golang/gocui-zhong-wen-wen-dang/"/>
+    <id>http://localhost:4000/golang/gocui-zhong-wen-wen-dang/</id>
+    <published>2020-01-19T17:16:48.000Z</published>
+    <updated>2020-02-19T17:49:13.589Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;package-gocui&quot;&gt;&lt;a href=&quot;#package-gocui&quot; class=&quot;headerlink&quot; title=&quot;package gocui&quot;&gt;&lt;/a&gt;package gocui&lt;/h2&gt;&lt;p&gt;&lt;code&gt;import
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="http://localhost:4000/categories/golang/"/>
+    
+    
+      <category term="golang" scheme="http://localhost:4000/tags/golang/"/>
+    
+      <category term="Go语言" scheme="http://localhost:4000/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="gocui" scheme="http://localhost:4000/tags/gocui/"/>
+    
+      <category term="命令行界面" scheme="http://localhost:4000/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%95%8C%E9%9D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>markdow语法教程</title>
+    <link href="http://localhost:4000/hexo/markdow-yu-fa-jiao-cheng/"/>
+    <id>http://localhost:4000/hexo/markdow-yu-fa-jiao-cheng/</id>
+    <published>2020-01-01T10:39:16.000Z</published>
+    <updated>2020-02-19T17:48:31.549Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Hexo-Material主题配置测试&quot;&gt;&lt;a href=&quot;#Hexo-Material主题配置测试&quot; class=&quot;headerlink&quot; title=&quot;Hexo+Material主题配置测试&quot;&gt;&lt;/a&gt;Hexo+Material主题配置测试&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://localhost:4000/categories/Hexo/"/>
+    
+    
+      <category term="markdow" scheme="http://localhost:4000/tags/markdow/"/>
+    
+      <category term="Hexo" scheme="http://localhost:4000/tags/Hexo/"/>
+    
+      <category term="Material" scheme="http://localhost:4000/tags/Material/"/>
+    
+      <category term="Hexo主题" scheme="http://localhost:4000/tags/Hexo%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
+  
+</feed>

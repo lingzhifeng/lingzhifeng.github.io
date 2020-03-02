@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lingzhifeng.github.io/hexo/hexo-github-da-jian-jiao-cheng/</loc>
+    <lastmod>2020-03-02</lastmod>
+  </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/</loc>
     <lastmod>2020-03-02</lastmod>
   </url>  <url>
@@ -26,9 +29,6 @@
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/go-yu-yan-zhan-wei-fu/</loc>
-    <lastmod>2020-02-19</lastmod>
-  </url>  <url>
-    <loc>https://lingzhifeng.github.io/hexo/hexo-github-da-jian-jiao-cheng/</loc>
     <lastmod>2020-02-19</lastmod>
   </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/gocui-zhong-wen-wen-dang/</loc>

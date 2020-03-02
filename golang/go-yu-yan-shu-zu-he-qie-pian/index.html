@@ -779,14 +779,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.1k
+                        3.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        9 分
+                        15 分
                     </div>
                     
                 
@@ -918,6 +918,128 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
 fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
 fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> qiepian<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">)</span><span class="token punctuation">)</span>
 fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"qiepian1:\n %v \n 类型：%T 长度：%v 容量：%v \n"</span><span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> qiepian1<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>qiepian1<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h3 id="切片添加元素"><a href="#切片添加元素" class="headerlink" title="切片添加元素"></a>切片添加元素</h3><p>为切片添加元素可以使用<code>append(qiepian)</code>为切片添加一个元素。也可以使用<code>for</code>为切片添加元素。添加元素是主要数据类型，不要搞错了。</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">//为切片添加多个元素</span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span>
+qiepian <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">6</span><span class="token punctuation">]</span>
+qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">//为切片添加三个元素0,2,3</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%v \n"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//用for为切片添加元素</span>
+nameI <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> v <span class="token operator">:=</span> <span class="token keyword">range</span> nameI <span class="token punctuation">{</span>
+    qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%v"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//注意看'append(qiepian, s...)'。因为's'也是一个切片，里面有多个元素。's...'的意思是把's'中的元素拆开，添加到切片'qiepian'中。</span>
+s <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> s<span class="token operator">...</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%v"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">)</span></code></pre>
+<h3 id="构造切片"><a href="#构造切片" class="headerlink" title="构造切片"></a>构造切片</h3><p>可以使用<code>make([]数据类型,元素数量,切片容量)</code>来构造一个切片。下面提供三种构造切片的方法。用<code>make()</code>构造的切片并申请内存空间。第二种<code>name</code>根据存储数据来动态扩容。一般推荐用<code>make()</code>来构造切片，一次申请到够用的空间，提高程序运行效率。第二种就麻烦了，存一个元素时申请一个数组，存三个元素时在申请一个底层数组，存10个元素是在更换一个底层数组，拖累程序运行效率。推荐一次直接到位的使用<code>make()</code>申请到够用的元素数量和容量。第三种<code>var name3 []string</code>只是声明切片，并没有分配到底层数组。和`name2一样是动态扩容的切片。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span>
+name2 <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">var</span> name3 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%v len:%v cap:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name2:%v len:%v cap:%v \n"</span><span class="token punctuation">,</span> name2<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name3:%v len:%v cap:%v \n"</span><span class="token punctuation">,</span> name3<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name3<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name3<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<h3 id="切片不能直接比较"><a href="#切片不能直接比较" class="headerlink" title="切片不能直接比较"></a>切片不能直接比较</h3><p>我们不能使用<code>==</code>来直接比较两个切片中的元素全部相等。切片唯一合法的比较操作是和<code>nil</code>比较。一个<code>nil</code>的切片没有底层数组。</p>
+<pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span>
+name2 <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">var</span> name3 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%v len:%v cap:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name2:%v len:%v cap:%v \n"</span><span class="token punctuation">,</span> name2<span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>name2<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>name2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%t name2:%t name3:%t \n"</span><span class="token punctuation">,</span> name <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> name2 <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> name3 <span class="token operator">==</span> <span class="token boolean">nil</span><span class="token punctuation">)</span></code></pre>
+<p>上面代码<code>name</code>，<code>name2</code>，<code>name3</code>都没有保存数据，但是<code>name3</code>返回的是<code>true</code>，因为<code>name</code>只是声明了切片，并没有初始化，还没有底层数组，所以返回<code>true</code>。那怎么判断切片有没有保存数据呢，只能用<code>len(name)==0</code>来判断切片有没有数据。一个<code>nil</code>的切片没有底层数组。</p>
+<h3 id="切片的拷贝"><a href="#切片的拷贝" class="headerlink" title="切片的拷贝"></a>切片的拷贝</h3><p>拷贝切片有两种方法，先说第一种最简单的赋值拷贝。赋值拷贝简单方便，但是有一个缺点，<code>name</code>和<code>name2</code>都属于同一个底层数组，所以修改<code>name2[2]</code>的数据，会导致底层数组的数据改变，相应的<code>name</code>也会改变数据。入下代码：</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">//用make()构造切片</span>
+name <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//初始化切片name</span>
+name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//赋值拷贝name到name2</span>
+name2 <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">//打印name和name2</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name2:%v \n"</span><span class="token punctuation">,</span> name2<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//修改name[2]的数据</span>
+name2<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"gg"</span>
+
+<span class="token comment" spellcheck="true">//再次输出name和name2</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name2:%v \n"</span><span class="token punctuation">,</span> name2<span class="token punctuation">)</span></code></pre>
+<p>第二种办法使用内置函数<code>copy()</code>拷贝。用<code>copy()</code>相当于把切片<code>name</code>的底层数组也拷贝到了切片<code>name2</code>，虽然保存的数据相同，但是两个切片的底层数组不一样了。这样修改切片<code>name2</code>就不会改动<code>name</code>的数据了。用法：<code>copy(目标切片,数据来源切片)</code>。</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">//用make()构造切片</span>
+name <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//初始化切片name</span>
+name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">//用make()构造切片</span>
+name2 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//用copy()函数把切片'name'拷贝到'name2'</span>
+<span class="token function">copy</span><span class="token punctuation">(</span>name2<span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//打印name和name2</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name2:%v \n"</span><span class="token punctuation">,</span> name2<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//修改name[2]的数据</span>
+name2<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"gg"</span>
+
+<span class="token comment" spellcheck="true">//再次输出name和name2</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"修改'name2[2]=gg'后："</span><span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"name2:%v \n"</span><span class="token punctuation">,</span> name2<span class="token punctuation">)</span></code></pre>
+<h3 id="从切片中删除元素"><a href="#从切片中删除元素" class="headerlink" title="从切片中删除元素"></a>从切片中删除元素</h3><p>并没有删除切片元素的方法，但是我们可以用但是我们可以用切片的特性来删除切片元素。如下例：</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">//声明并初始化数组'name'</span>
+name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"dd"</span><span class="token punctuation">,</span> <span class="token string">"ee"</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//输出数组'name'</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//声明并初始化切片'name1'</span>
+name1 <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true">//输出切片'name1'</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"切片name1:%v \n"</span><span class="token punctuation">,</span> name1<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//删除切片元素</span>
+name1 <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>name1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> name1<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token operator">...</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//输出数组'name'</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//输出切片</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"切片name1:%v \n"</span><span class="token punctuation">,</span> name1<span class="token punctuation">)</span></code></pre>
+<p>输出如下：</p>
+<blockquote>
+<p>数组name:[aa bb cc dd ee]<br>切片name1:[aa bb cc dd ee]<br>数组name:[aa cc dd ee ee]<br>切片name1:[aa cc dd ee]</p>
+</blockquote>
+<p>仔细看数组<code>name</code>的数据。<code>append()</code>函数删除元素实际并不是删除，而且添加元素，或者叫修改元素，Go语言没有真正的删除切片或者数组元素的办法。<code>name1=append(name1[:1],name1[2:]...)</code>语句等同于:</p>
+<pre class=" language-go"><code class="language-go"><span class="token comment" spellcheck="true">//声明并初始化数组'name'</span>
+name <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"aa"</span><span class="token punctuation">,</span> <span class="token string">"bb"</span><span class="token punctuation">,</span> <span class="token string">"cc"</span><span class="token punctuation">,</span> <span class="token string">"dd"</span><span class="token punctuation">,</span> <span class="token string">"ee"</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//输出数组'name'</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//声明并初始化切片'name1'</span>
+name1 <span class="token operator">:=</span> name<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true">//输出切片'name1'</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"切片name1:%v \n"</span><span class="token punctuation">,</span> name1<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//删除切片元素</span>
+<span class="token comment" spellcheck="true">// name1 = append(name1[:1], name1[2:]...)</span>
+
+<span class="token comment" spellcheck="true">//上面语句等同于下面3行语句。</span>
+name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> name<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+name<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> name<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+name<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> name<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
+
+<span class="token comment" spellcheck="true">//输出数组'name'</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v \n"</span><span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//输出切片</span>
+fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"切片name1:%v \n"</span><span class="token punctuation">,</span> name1<span class="token punctuation">)</span></code></pre>
+<p>说白了，就是掩耳盗铃，我不看你就就是没有，就是删除成功了。自己骗自己，但是效果出来了啊。呵呵～～～</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1726,7 +1848,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Printf</
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">27.7k</span> 字
+                <span class="white-color">29.8k</span> 字
             
 
             

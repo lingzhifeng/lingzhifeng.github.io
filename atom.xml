@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lingzhifeng.github.io/"/>
-  <updated>2020-03-01T08:03:51.756Z</updated>
+  <updated>2020-03-02T12:35:17.199Z</updated>
   <id>https://lingzhifeng.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go语言运算符</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/</id>
+    <published>2020-03-02T11:36:13.000Z</published>
+    <updated>2020-03-02T12:35:17.199Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Go语言基础之运算符&quot;&gt;&lt;a href=&quot;#Go语言基础之运算符&quot; class=&quot;headerlink&quot; title=&quot;Go语言基础之运算符&quot;&gt;&lt;/a&gt;Go语言基础之运算符&lt;/h2&gt;&lt;p&gt;运算符用于在程序运行时执行数学或逻辑运算。&lt;/p&gt;
+&lt;p&gt;Go
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="Go运算符" scheme="https://lingzhifeng.github.io/tags/Go%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>晨星基金评级</title>
@@ -47,7 +76,7 @@
     <link href="https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/"/>
     <id>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</id>
     <published>2020-02-29T12:59:02.000Z</published>
-    <updated>2020-03-01T06:45:22.206Z</updated>
+    <updated>2020-03-02T01:21:26.153Z</updated>
     
     <summary type="html">
     
@@ -218,9 +247,9 @@
       <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
     
     
-      <category term="golang" scheme="https://lingzhifeng.github.io/tags/golang/"/>
-    
       <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/tags/golang/"/>
     
       <category term="gocui" scheme="https://lingzhifeng.github.io/tags/gocui/"/>
     

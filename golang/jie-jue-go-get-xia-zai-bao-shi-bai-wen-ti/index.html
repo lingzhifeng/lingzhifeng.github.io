@@ -6,11 +6,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="VIM正则表达式, So Cold , 好冷">
+    <meta name="keywords" content="解决go get下载包失败问题, So Cold , 好冷">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
-    <meta name="description" content="vim正则表达式Vim中的正则表达式功能很强大，如果能自由运用，则可以完成很多难以想象的操作。如果你比较熟悉Perl的正规表达式，可以直接参照与Perl正则表达式的区别一节。
-使用正则表达式的命令使用正则表达式的命令最常见的就是/**搜索命">
+    <meta name="description" content="解决go get下载包失败问题由于某些不可抗力的原因，国内使用go get命令安装包时会经常会出现timeout的问题。本文介绍几个常用的解决办法。
+从github克隆golang在github上建立了一个镜像库，如https://gith">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>VIM正则表达式 | So Cold</title>
+    <title>解决go get下载包失败问题 | So Cold</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -616,13 +616,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        VIM正则表达式
+                        解决go get下载包失败问题
                     </div>
                 </div>
             </div>
@@ -734,12 +734,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/vim/" target="_blank">
-                                <span class="chip bg-color">vim</span>
+                            <a href="/tags/Go语言/" target="_blank">
+                                <span class="chip bg-color">Go语言</span>
                             </a>
                         
-                            <a href="/tags/正则表达/" target="_blank">
-                                <span class="chip bg-color">正则表达</span>
+                            <a href="/tags/go-get/" target="_blank">
+                                <span class="chip bg-color">go get</span>
                             </a>
                         
                     </div>
@@ -750,8 +750,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/linux/" class="post-category" target="_blank">
-                                linux
+                            <a href="/categories/golang/" class="post-category" target="_blank">
+                                golang
                             </a>
                         
                     </div>
@@ -762,7 +762,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-19
+                    2020-03-03
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -776,14 +776,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.4k
+                        428
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        5 分
+                        1 分
                     </div>
                     
                 
@@ -795,219 +795,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="vim正则表达式"><a href="#vim正则表达式" class="headerlink" title="vim正则表达式"></a>vim正则表达式</h2><p>Vim中的正则表达式功能很强大，如果能自由运用，则可以完成很多难以想象的操作。如果你比较熟悉Perl的正规表达式，可以直接参照<a href="http://www.idv2.com/vimwiki/index.php?%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F#perldiff" target="_blank" rel="noopener">与Perl正则表达式的区别</a>一节。</p>
-<h3 id="使用正则表达式的命令"><a href="#使用正则表达式的命令" class="headerlink" title="使用正则表达式的命令"></a>使用正则表达式的命令</h3><p>使用正则表达式的命令最常见的就是<code>/**</code>搜索命令。其格式如下：</p>
-<h4 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h4><p>另一个很有用的命令就是<code>:n1,n2s/*/*/gc</code>（替换）命令，将第一个*之间的正则表达式替换成第二个*之间的字符串。</p>
-<p><code>:s/正则表达式/替换字符串/选项</code><br>在学习正则表达式时可以利用<code>/</code>命令来练习。</p>
-<h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><p>元字符是具有特殊意义的字符。使用元字符可以表达任意字符、行首、行 尾、某几个字符等意义。</p>
-<h4 id="元字符一览"><a href="#元字符一览" class="headerlink" title="元字符一览"></a>元字符一览</h4><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>.</code></td>
-<td>匹配任意一个字符</td>
-</tr>
-<tr>
-<td><code>[abc]</code></td>
-<td>匹配方括号中的任意一个字符。可以使用-表示字符范围。</td>
-</tr>
-<tr>
-<td><code>[a-z0-9]</code></td>
-<td>匹配小写字母和阿拉伯数字。</td>
-</tr>
-<tr>
-<td><code>[^abc]</code></td>
-<td>在方括号内开头使用<code>^</code>符号，表示匹配除方括号中字符之外的任意字符。</td>
-</tr>
-<tr>
-<td><code>\d</code></td>
-<td>匹配阿拉伯数字，等同于<code>[0-9]</code>。</td>
-</tr>
-<tr>
-<td><code>\D</code></td>
-<td>匹配阿拉伯数字之外的任意字符，等同于<code>[^0-9]</code>。</td>
-</tr>
-<tr>
-<td><code>\x</code></td>
-<td>匹配十六进制数字，等同于<code>[0-9A-Fa-f]</code>。</td>
-</tr>
-<tr>
-<td><code>\X</code></td>
-<td>匹配十六进制数字之外的任意字符，等同于<code>[^0-9A-Fa-f]</code>。</td>
-</tr>
-<tr>
-<td><code>\w</code></td>
-<td>匹配单词字母，等同于<code>[0-9A-Za-z_]</code>。</td>
-</tr>
-<tr>
-<td><code>\W</code></td>
-<td>匹配单词字母之外的任意字符，等同于<code>[^0-9A-Za-z_]</code>。</td>
-</tr>
-<tr>
-<td><code>\t</code></td>
-<td>匹配<kbd>TAB</kbd>字符。</td>
-</tr>
-<tr>
-<td><code>\s</code></td>
-<td>匹配空白字符，等同于<code>[\t]</code>。</td>
-</tr>
-<tr>
-<td><code>\S</code></td>
-<td>匹配非空白字符，等同于<code>[^\t]</code>。</td>
-</tr>
-</tbody></table>
-<p>另外，如果要查找字符<code>*、.、/</code>等，则需要在前面用<code>\</code>符号，表示这不是元字符，而只是普通字符而已。</p>
-<table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>\*</code></td>
-<td>匹配<code>*</code>字符。</td>
-</tr>
-<tr>
-<td><code>\.</code></td>
-<td>匹配<code>.</code>字符。</td>
-</tr>
-<tr>
-<td><code>\/</code></td>
-<td>匹配<code>/</code>字符。</td>
-</tr>
-<tr>
-<td><code>\\</code></td>
-<td>匹配<code>\</code>字符。</td>
-</tr>
-<tr>
-<td><code>\[</code></td>
-<td>匹配<code>[</code>字符。</td>
-</tr>
-</tbody></table>
-<h5 id="表示数量的元字符"><a href="#表示数量的元字符" class="headerlink" title="表示数量的元字符"></a>表示数量的元字符</h5><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>*</code></td>
-<td>匹配<code>0-任意</code>个</td>
-</tr>
-<tr>
-<td><code>\+</code></td>
-<td>匹配<code>1-任意</code>个</td>
-</tr>
-<tr>
-<td><code>\?</code></td>
-<td>匹配<code>0-1</code>个</td>
-</tr>
-<tr>
-<td><code>\{n,m}</code></td>
-<td>匹配<code>n-m</code>个</td>
-</tr>
-<tr>
-<td><code>\{n}</code></td>
-<td>匹配<code>n</code>个</td>
-</tr>
-<tr>
-<td><code>\{n,}</code></td>
-<td>匹配<code>n-任意</code></td>
-</tr>
-<tr>
-<td><code>\{,m}</code></td>
-<td>匹配<code>0-m个</code></td>
-</tr>
-</tbody></table>
-<h5 id="表示位置的符号"><a href="#表示位置的符号" class="headerlink" title="表示位置的符号"></a>表示位置的符号</h5><table>
-<thead>
-<tr>
-<th>元字符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>$</code></td>
-<td>匹配行尾</td>
-</tr>
-<tr>
-<td><code>^</code></td>
-<td>匹配行首</td>
-</tr>
-<tr>
-<td><code>\&lt;</code></td>
-<td>匹配单词词首</td>
-</tr>
-<tr>
-<td><code>\&gt;</code></td>
-<td>匹配单词词尾</td>
-</tr>
-</tbody></table>
-<h5 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h5><p><code>/char\s\+[A-Za-z_]\w*;</code><br><strong>查找所有以char开头，之后是一个以上的空白，最后是一个标识符和分号。</strong></p>
-<p><code>/\d\d:\d\d:\d\d</code><br><strong>查找如17:37:01格式的时间字符串</strong></p>
-<p><code>:g/^\s*$/d</code><br><strong>删除只有空白的行</strong></p>
-<p><code>:s/\&lt;four\&gt;/4/g</code><br><strong>将所有的four替换成4，但是fourteen中的four不替换</strong></p>
-<h3 id="替换变量"><a href="#替换变量" class="headerlink" title="替换变量"></a>替换变量</h3><p>在正规表达式中使用<code>\(</code>和<code>\)</code>符号括起正规表达式，即可在后面使用<code>\1</code>、<code>\2</code>等变量来访问<code>\(</code>和<code>\)</code>中的内容。</p>
-<h4 id="替换变量实例："><a href="#替换变量实例：" class="headerlink" title="替换变量实例："></a>替换变量实例：</h4><p><code>/\(a\+\)[^a]\+\1</code><br><strong>查找开头和结尾处a的个数相同的字符串，如aabbbaa，aaacccaaa，但是不匹配abbbaa</strong></p>
-<p><code>:s/\(http:\/\/[-a-z\._~\+%\/]\+\)/&lt;a href="\1"&gt;\1&lt;\/a&gt;/</code><br><strong>将URL替换为</strong><code>&lt;a href="http://url"&gt;http://url&lt;/a&gt;</code><strong>的格式</strong></p>
-<p><code>:s/\(\w\+\)\s\+\(\w\+\)/\2\t\1</code><br><strong>将data1，data2 修改为data2，data1</strong></p>
-<h3 id="函数式"><a href="#函数式" class="headerlink" title="函数式"></a>函数式</h3><p>在替换命令<code>:n1,n2s/*/#/</code>中可以使用函数表达式来书写替换内容，格式为:</p>
-<p><strong>:s/替换字符串/=函数式</strong></p>
-<p>在函数式中可以使用<code>submatch(1)</code>、<code>submatch(2)</code>等来引用<code>\1</code>、<code>\2</code>等的内容，而<code>submatch(0)</code>可以引用匹配的整个内容。</p>
-<h5 id="函数式实例"><a href="#函数式实例" class="headerlink" title="函数式实例"></a>函数式实例</h5><p><code>:%s/\&lt;id\&gt;/\=line(".")</code><br><strong>将各行的id字符串替换为行号</strong></p>
-<p><code>:%s/^\&lt;\w\+\&gt;/\=(line(".")-10) .".". submatch(1)</code><br><strong>将每行开头的单词替换为(行号-10).单词的格式，如第11行的</strong><code>word</code><strong>替换成</strong><code>1. word</code></p>
-<h3 id="与Perl正则表达式的区别"><a href="#与Perl正则表达式的区别" class="headerlink" title="与Perl正则表达式的区别"></a>与Perl正则表达式的区别</h3><p>元字符的区别</p>
-<table>
-<thead>
-<tr>
-<th>Vim语法</th>
-<th>Perl语法</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>\+</code></td>
-<td><code>+</code></td>
-<td><code>1-任意个</code></td>
-</tr>
-<tr>
-<td><code>\?</code></td>
-<td><code>?</code></td>
-<td><code>0-1个</code></td>
-</tr>
-<tr>
-<td><code>\{n,m}</code></td>
-<td><code>{n,m}</code></td>
-<td><code>n-m个</code></td>
-</tr>
-<tr>
-<td><code>\(</code>和<code>\)</code></td>
-<td><code>(和)</code></td>
-<td><code>分组</code></td>
-</tr>
-</tbody></table>
-<h3 id="vi-正则表达式练习"><a href="#vi-正则表达式练习" class="headerlink" title="vi 正则表达式练习"></a>vi 正则表达式练习</h3><p>闲言碎语不要讲…例子说明一切，比如下面这段我需要换成<code>ubb</code>标签</p>
-<p>vim命令模式，输入:</p>
-<p><code>:%s/.*src=”([^"]*)”[^&gt;]*&gt;/[img]1[/img]/g</code></p>
-<p>替换为<br><code>[img ]gu.jpg[ /img]</code><br><code>[img ]os.jpg[ /img]</code><br><code>[img ]hu.jpg[ /img]</code><br><code>[img ]ang.jpg[ /img]</code></p>
-<p>解释如下：</p>
-<p><code>:</code><br><strong>命令执行状态</strong></p>
-<p><code>%s</code><br><strong>表示查找并替换</strong></p>
-<p><code>%s/a/b/g</code><br><strong>a被查找的字符串（正则匹配）；b要替换成的文字；g表示全局搜索替换（否则只处理找到的第一个结果）</strong></p>
-<p><code>([^"]*)</code><br><strong>表示非引号的字符N个；外面()表示后面替换要用（用1,…,9等引用）</strong></p>
-<p><code>[/img]</code><br><strong>/需要被转义</strong></p>
-<p>与其它工具正则不一样的地方在于<code>()</code>也必须<code>()</code>，怪不得我老是弄不出来。</p>
-<blockquote>
-<p>相关资料：<br><a href="http://net.pku.edu.cn/~yhf/tao_regexps_zh.html" target="_blank" rel="noopener">via</a>:<a href="http://net.pku.edu.cn/~yhf/tao_regexps_zh.html" target="_blank" rel="noopener">http://net.pku.edu.cn/~yhf/tao_regexps_zh.html</a></p>
-</blockquote>
-<p>简单命令:</p>
-<p><code>:%s/ */ /g</code>---把一个或者多个空格替换为一个空格。<br><code>:%s/ *$//</code>---去掉行尾的所有空格。<br><code>:%s/^/ /</code>---在每一行头上加入一个空格。<br><code>:%s/^[0-9][0-9]* //</code>---去掉行首的所有数字字符。<br><code>:%s/b[aeio]g/bug/g</code>---将所有的bag、beg、big和bog改为bug。<br><code>:%s/t([aou])g/h1t/g</code>---将所有tag、tog和tug分别改为hat、hot和hug（注意用group的用法和使用1引用前面被匹配的字符）。</p>
+                <h2 id="解决go-get下载包失败问题"><a href="#解决go-get下载包失败问题" class="headerlink" title="解决go get下载包失败问题"></a>解决go get下载包失败问题</h2><p>由于某些不可抗力的原因，国内使用<code>go get</code>命令安装包时会经常会出现<code>timeout</code>的问题。本文介绍几个常用的解决办法。</p>
+<h3 id="从github克隆"><a href="#从github克隆" class="headerlink" title="从github克隆"></a>从github克隆</h3><p><code>golang</code>在<code>github</code>上建立了一个镜像库，如<code>https://github.com/golang/net</code>就对应是 <code>https://golang.org/x/net</code>的镜像库。 要下载<code>golang.org/x/net</code>包，可以在本地创建包的目录后使用<code>git clone</code>来拉取相应包的源代码文件，具体操作如下：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">mkdir</span> -p <span class="token variable">$GOPATH</span>/src/golang.org/x
+<span class="token function">cd</span> <span class="token variable">$GOPATH</span>/src/golang.org/x
+<span class="token function">git</span> clone https://github.com/golang/net.git</code></pre>
+<h3 id="使用gopm"><a href="#使用gopm" class="headerlink" title="使用gopm"></a>使用gopm</h3><p>使用<code>gopm</code>可以从<code>golang.org</code>的一些镜像网站上下载。</p>
+<h3 id="安装gopm"><a href="#安装gopm" class="headerlink" title="安装gopm"></a>安装gopm</h3><pre class=" language-bash"><code class="language-bash">go get -u github.com/gpmgo/gopm</code></pre>
+<p>使用<code>gopm</code>安装第三方包<br>不加<code>-g</code>参数，会把依赖包下载<code>.vendor</code>目录下面； 加上<code>-g</code>参数，可以把依赖包下载到<code>GOPATH</code>目录中。</p>
+<pre class=" language-bash"><code class="language-bash">gopm get -g golang.org/x/net  </code></pre>
+<h3 id="使用goproxy"><a href="#使用goproxy" class="headerlink" title="使用goproxy"></a>使用goproxy</h3><p>Go的1.11版本以后 可以设置<code>GOPROXY</code>这个变量，来设置代理。 如果你自己有代理服务器就可以把这个环境变量设置成自己的代理。 首先开启<code>go module</code>支持:</p>
+<p>在Mac/linux下执行：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">export</span> GO111MODULE<span class="token operator">=</span>on</code></pre>
+<p>Windows平台执行：</p>
+<pre class=" language-bash"><code class="language-bash">SET GO111MODULE<span class="token operator">=</span>on</code></pre>
+<p>2019.6.10更新:goproxy.cn</p>
+<p>我们这里以<a href="https://goproxy.cn为例：" target="_blank" rel="noopener">https://goproxy.cn为例：</a></p>
+<p>在Mac/linux下可以执行以下命令来设置：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">export</span> GOPROXY<span class="token operator">=</span>https://goproxy.cn</code></pre>
+<p>Windows平台在cmd执行以下命令来设置：</p>
+<pre class=" language-bash"><code class="language-bash">SET GOPROXY<span class="token operator">=</span><span class="token string">"https://goproxy.cn"</span></code></pre>
+<p>或者在PowerShell中执行：</p>
+<pre class=" language-bash"><code class="language-bash">C:\<span class="token operator">></span> <span class="token variable">$env</span>:GOPROXY <span class="token operator">=</span> <span class="token string">"https://goproxy.cn"</span></code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1176,7 +985,7 @@
                     </span>
                     <a href="https://lingzhifeng.github.io" class="b-link-green">So Cold</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/linux/vim-zheng-ze-biao-da-shi/" class="b-link-green">VIM正则表达式</a>
+                    <a href="/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/" class="b-link-green">解决go get下载包失败问题</a>
                 </p>
             </div>
 
@@ -1199,7 +1008,7 @@
         repo: 'shw2018.github.io',
         owner: 'shw2018',
         admin: ["shw2018"],
-        id: 'linux/vim-zheng-ze-biao-da-shi/',
+        id: 'golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1518,33 +1327,31 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/golang/spacevim-guan-fang-wen-dang/">
+                <a href="/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="SpaceVim官方文档">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="解决go get下载包失败问题">
                         
-                        <span class="card-title">SpaceVim官方文档</span>
+                        <span class="card-title">解决go get下载包失败问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            描述该层用于golang开发。 它还提供了其他特定于语言的键映射。
-安装要使用此配置层，请使用以下命令更新自定义配置文件：
-[[layers]]
-  name = "lang#go"
-安装后，在vim中运行：GoInstallBinarie
+                            解决go get下载包失败问题由于某些不可抗力的原因，国内使用go get命令安装包时会经常会出现timeout的问题。本文介绍几个常用的解决办法。
+从github克隆golang在github上建立了一个镜像库，如https://gith
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1557,23 +1364,16 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/golang/" target="_blank">
-                        <span class="chip bg-color">golang</span>
+                    <a href="/tags/Go语言/" target="_blank">
+                        <span class="chip bg-color">Go语言</span>
                     </a>
                     
-                    <a href="/tags/SpaceVim/" target="_blank">
-                        <span class="chip bg-color">SpaceVim</span>
-                    </a>
-                    
-                    <a href="/tags/vim开发环境/" target="_blank">
-                        <span class="chip bg-color">vim开发环境</span>
-                    </a>
-                    
-                    <a href="/tags/go语言开发环境/" target="_blank">
-                        <span class="chip bg-color">go语言开发环境</span>
+                    <a href="/tags/go-get/" target="_blank">
+                        <span class="chip bg-color">go get</span>
                     </a>
                     
                 </div>
@@ -1587,45 +1387,25 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/golang/go-yu-yan-zhan-wei-fu/">
+                <a href="/golang/go-liu-cheng-kong-zhi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="go语言占位符">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Go流程控制">
                         
-                        <span class="card-title">go语言占位符</span>
+                        <span class="card-title">Go流程控制</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            在这里按照占位符将被替换的变量类型划分，更方便查询和记忆。
-General（通用占位符）
-
-
-占位符
-说明
-
-
-
-%v
-以默认的方式打印变量的值
-
-
-%T
-打印变量的类型
-
-
-%%
-字面上的百分号，并非值的占位符
-
-
-Integer（整型）
+                            Go语言基础之流程控制流程控制是每种编程语言控制逻辑走向和执行次序的重要部分，流程控制可以说是一门语言的“经脉”。
+Go语言中最常用的流程控制有if和for，而switch和goto主要是为了简化代码、降低重复代码而生的结构，属于扩展类的流
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-19
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-03-03
                             </span>
                         <span class="publish-author">
                             
@@ -1642,16 +1422,8 @@ Integer（整型）
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/golang/" target="_blank">
-                        <span class="chip bg-color">golang</span>
-                    </a>
-                    
-                    <a href="/tags/go语言/" target="_blank">
-                        <span class="chip bg-color">go语言</span>
-                    </a>
-                    
-                    <a href="/tags/go语言占位符/" target="_blank">
-                        <span class="chip bg-color">go语言占位符</span>
+                    <a href="/tags/Go语言/" target="_blank">
+                        <span class="chip bg-color">Go语言</span>
                     </a>
                     
                 </div>

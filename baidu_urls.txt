@@ -1,3 +1,5 @@
+https://lingzhifeng.github.io/golang/go-yu-yan-shu-ju-lei-xing/
+https://lingzhifeng.github.io/golang/go-yu-yan-bian-liang-he-chang-liang/
 https://lingzhifeng.github.io/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/
 https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/
 https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/

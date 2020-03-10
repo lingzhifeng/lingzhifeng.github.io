@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-ju-lei-xing/</loc>
+    
+    <lastmod>2020-03-06T10:15:05.292Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-bian-liang-he-chang-liang/</loc>
+    
+    <lastmod>2020-03-06T10:10:06.992Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</loc>
+    
+    <lastmod>2020-03-04T06:39:34.528Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lingzhifeng.github.io/hexo/hexo-github-da-jian-jiao-cheng/</loc>
     
     <lastmod>2020-03-02T16:47:55.749Z</lastmod>
@@ -26,13 +47,6 @@
     <loc>https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/</loc>
     
     <lastmod>2020-03-02T12:35:17.199Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</loc>
-    
-    <lastmod>2020-03-02T01:21:26.153Z</lastmod>
     
   </url>
   
@@ -100,7 +114,7 @@
   </url>
   
   <url>
-    <loc>https://lingzhifeng.github.io/friends/index.html</loc>
+    <loc>https://lingzhifeng.github.io/categories/index.html</loc>
     
     <lastmod>2020-02-13T08:15:12.471Z</lastmod>
     
@@ -114,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://lingzhifeng.github.io/categories/index.html</loc>
+    <loc>https://lingzhifeng.github.io/contact/index.html</loc>
     
     <lastmod>2020-02-13T08:15:12.471Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://lingzhifeng.github.io/contact/index.html</loc>
+    <loc>https://lingzhifeng.github.io/friends/index.html</loc>
     
     <lastmod>2020-02-13T08:15:12.471Z</lastmod>
     

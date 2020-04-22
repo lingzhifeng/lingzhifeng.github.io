@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lingzhifeng.github.io/"/>
-  <updated>2020-03-06T10:15:05.292Z</updated>
+  <updated>2020-04-22T14:48:52.261Z</updated>
   <id>https://lingzhifeng.github.io/</id>
   
   <author>
@@ -15,6 +15,100 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>接口</title>
+    <link href="https://lingzhifeng.github.io/golang/jie-kou/"/>
+    <id>https://lingzhifeng.github.io/golang/jie-kou/</id>
+    <published>2020-04-22T14:43:07.000Z</published>
+    <updated>2020-04-22T14:48:52.261Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在Go语言中接口&lt;strong&gt;interface&lt;/strong&gt;是一种类型，一种抽象的类型。&lt;br&gt;interface是一组method的集合，是duck-type
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="接口" scheme="https://lingzhifeng.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义类型 类型别名 结构体和json</title>
+    <link href="https://lingzhifeng.github.io/golang/zi-ding-yi-lei-xing-lei-xing-bie-ming-jie-gou-ti-he-json/"/>
+    <id>https://lingzhifeng.github.io/golang/zi-ding-yi-lei-xing-lei-xing-bie-ming-jie-gou-ti-he-json/</id>
+    <published>2020-04-22T13:30:07.000Z</published>
+    <updated>2020-04-22T13:42:25.987Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;类型别名和自定义类型&quot;&gt;&lt;a href=&quot;#类型别名和自定义类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="结构体" scheme="https://lingzhifeng.github.io/tags/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    
+      <category term="自定义类型" scheme="https://lingzhifeng.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B/"/>
+    
+      <category term="类型别名" scheme="https://lingzhifeng.github.io/tags/%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/"/>
+    
+      <category term="json" scheme="https://lingzhifeng.github.io/tags/json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>指针和MAP类型</title>
+    <link href="https://lingzhifeng.github.io/golang/zhi-zhen-he-map-lei-xing/"/>
+    <id>https://lingzhifeng.github.io/golang/zhi-zhen-he-map-lei-xing/</id>
+    <published>2020-04-19T11:43:44.000Z</published>
+    <updated>2020-04-19T12:00:21.665Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;声明指针&quot;&gt;&lt;a href=&quot;#声明指针&quot; class=&quot;headerlink&quot; title=&quot;声明指针&quot;&gt;&lt;/a&gt;声明指针&lt;/h3&gt;&lt;p&gt;指针也是一种数据类型，也可以使用&lt;code&gt;var&lt;/code&gt;来声明：&lt;code&gt;var 变量名
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/tags/golang/"/>
+    
+      <category term="指针" scheme="https://lingzhifeng.github.io/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="map" scheme="https://lingzhifeng.github.io/tags/map/"/>
+    
+  </entry>
   
   <entry>
     <title>Go语言数据类型</title>
@@ -99,11 +193,37 @@
   </entry>
   
   <entry>
+    <title>Go变量和变量类型</title>
+    <link href="https://lingzhifeng.github.io/golang/go-bian-liang-he-bian-liang-lei-xing/"/>
+    <id>https://lingzhifeng.github.io/golang/go-bian-liang-he-bian-liang-lei-xing/</id>
+    <published>2020-03-02T16:14:44.000Z</published>
+    <updated>2020-04-19T12:59:39.085Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;go中定义变量和变量类型：&quot;&gt;&lt;a href=&quot;#go中定义变量和变量类型：&quot; class=&quot;headerlink&quot; title=&quot;go中定义变量和变量类型：&quot;&gt;&lt;/a&gt;go中定义变量和变量类型：&lt;/h1&gt;&lt;h3 id=&quot;变量类型&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Go流程控制</title>
     <link href="https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/"/>
     <id>https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/</id>
     <published>2020-03-02T16:14:44.000Z</published>
-    <updated>2020-03-02T16:19:24.979Z</updated>
+    <updated>2020-04-19T12:55:34.775Z</updated>
     
     <summary type="html">
     
@@ -184,7 +304,7 @@
     <link href="https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/"/>
     <id>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</id>
     <published>2020-02-29T12:59:02.000Z</published>
-    <updated>2020-03-04T06:39:34.528Z</updated>
+    <updated>2020-03-10T03:07:18.527Z</updated>
     
     <summary type="html">
     
@@ -214,7 +334,7 @@
     <link href="https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/"/>
     <id>https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/</id>
     <published>2020-02-19T17:26:21.000Z</published>
-    <updated>2020-02-25T07:08:41.159Z</updated>
+    <updated>2020-03-12T19:31:36.965Z</updated>
     
     <summary type="html">
     

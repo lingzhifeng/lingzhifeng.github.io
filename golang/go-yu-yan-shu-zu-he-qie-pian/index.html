@@ -829,7 +829,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
 name1<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"柱子"</span> <span class="token comment" spellcheck="true">//修改name1并不影响name</span>
 fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"数组name:%v\n数组name1:%v\n"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> name1<span class="token punctuation">)</span></code></pre>
 <p>再另外：<code>[n]*T</code>表示指针数组，<code>*[n]T</code>表示数组指针 。</p>
-<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>切片是基于数组做的封装，切片长度可变。声明切片是不需要在’[]’中定义元素数量。切片是引用类型，也就是说对切片进行操作，会改变底层数组的数据。</p>
+<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><p>切片是基于数组做的封装，切片长度可变。声明切片是不需要在<code>[]</code>中定义元素数量。切片是引用类型，也就是说对切片进行操作，会改变底层数组的数据。</p>
 <h3 id="切片定义"><a href="#切片定义" class="headerlink" title="切片定义"></a>切片定义</h3><pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> 切片名字 <span class="token punctuation">[</span><span class="token punctuation">]</span>类型</code></pre>
 <p>可以使用内置函数<code>len()</code>取得切片长度，用内置函数<code>cap()</code>取得切片容量。</p>
 <h3 id="基于数组定义切片"><a href="#基于数组定义切片" class="headerlink" title="基于数组定义切片"></a>基于数组定义切片</h3><p>为数组<code>name</code>创建切片：</p>
@@ -936,7 +936,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Printf</
 s <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
 qiepian <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>qiepian<span class="token punctuation">,</span> s<span class="token operator">...</span><span class="token punctuation">)</span>
 fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%v"</span><span class="token punctuation">,</span> qiepian<span class="token punctuation">)</span></code></pre>
-<h3 id="构造切片"><a href="#构造切片" class="headerlink" title="构造切片"></a>构造切片</h3><p>可以使用<code>make([]数据类型,元素数量,切片容量)</code>来构造一个切片。下面提供三种构造切片的方法。用<code>make()</code>构造的切片并申请内存空间。第二种<code>name</code>根据存储数据来动态扩容。一般推荐用<code>make()</code>来构造切片，一次申请到够用的空间，提高程序运行效率。第二种就麻烦了，存一个元素时申请一个数组，存三个元素时在申请一个底层数组，存10个元素是在更换一个底层数组，拖累程序运行效率。推荐一次直接到位的使用<code>make()</code>申请到够用的元素数量和容量。第三种<code>var name3 []string</code>只是声明切片，并没有分配到底层数组。和`name2一样是动态扩容的切片。</p>
+<h3 id="构造切片"><a href="#构造切片" class="headerlink" title="构造切片"></a>构造切片</h3><p>可以使用<code>make([]数据类型,元素数量,切片容量)</code>来构造一个切片。下面提供三种构造切片的方法。用<code>make()</code>构造的切片并申请内存空间。第二种<code>name</code>根据存储数据来动态扩容。一般推荐用<code>make()</code>来构造切片，一次申请到够用的空间，提高程序运行效率。第二种就麻烦了，存一个元素时申请一个数组，存三个元素时在申请一个底层数组，存10个元素是在更换一个底层数组，拖累程序运行效率。推荐一次直接到位的使用<code>make()</code>申请到够用的元素数量和容量。第三种<code>var name3 []string</code>只是声明切片，并没有分配到底层数组。和<code>name2</code>一样是动态扩容的切片。</p>
 <pre class=" language-go"><code class="language-go">name <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span>
 name2 <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 <span class="token keyword">var</span> name3 <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span>
@@ -1848,7 +1848,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Printf</
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">35.4k</span> 字
+                <span class="white-color">48.1k</span> 字
             
 
             

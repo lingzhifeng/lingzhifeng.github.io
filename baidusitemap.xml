@@ -1,22 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://lingzhifeng.github.io/golang/jie-kou/</loc>
+    <lastmod>2020-04-22</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/zi-ding-yi-lei-xing-lei-xing-bie-ming-jie-gou-ti-he-json/</loc>
+    <lastmod>2020-04-22</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/go-bian-liang-he-bian-liang-lei-xing/</loc>
+    <lastmod>2020-04-19</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/</loc>
+    <lastmod>2020-04-19</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/zhi-zhen-he-map-lei-xing/</loc>
+    <lastmod>2020-04-19</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/</loc>
+    <lastmod>2020-03-12</lastmod>
+  </url>  <url>
+    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</loc>
+    <lastmod>2020-03-10</lastmod>
+  </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-ju-lei-xing/</loc>
     <lastmod>2020-03-06</lastmod>
   </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/go-yu-yan-bian-liang-he-chang-liang/</loc>
     <lastmod>2020-03-06</lastmod>
   </url>  <url>
-    <loc>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</loc>
-    <lastmod>2020-03-04</lastmod>
-  </url>  <url>
     <loc>https://lingzhifeng.github.io/hexo/hexo-github-da-jian-jiao-cheng/</loc>
     <lastmod>2020-03-02</lastmod>
   </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/</loc>
-    <lastmod>2020-03-02</lastmod>
-  </url>  <url>
-    <loc>https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/</loc>
     <lastmod>2020-03-02</lastmod>
   </url>  <url>
     <loc>https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/</loc>
@@ -27,9 +42,6 @@
   </url>  <url>
     <loc>https://lingzhifeng.github.io/ji-jin/chen-xing-ji-jin-ping-ji/</loc>
     <lastmod>2020-03-01</lastmod>
-  </url>  <url>
-    <loc>https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/</loc>
-    <lastmod>2020-02-25</lastmod>
   </url>  <url>
     <loc>https://lingzhifeng.github.io/linux/vim-zheng-ze-biao-da-shi/</loc>
     <lastmod>2020-02-19</lastmod>

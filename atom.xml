@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>So Cold</title>
+  
+  <subtitle>So Cold</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://lingzhifeng.github.io/"/>
+  <updated>2020-05-30T11:43:55.811Z</updated>
+  <id>https://lingzhifeng.github.io/</id>
+  
+  <author>
+    <name>So Cold</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用手机学Go语言</title>
+    <link href="https://lingzhifeng.github.io/golang/yong-shou-ji-xue-go-yu-yan/"/>
+    <id>https://lingzhifeng.github.io/golang/yong-shou-ji-xue-go-yu-yan/</id>
+    <published>2020-05-30T08:03:06.000Z</published>
+    <updated>2020-05-30T11:43:55.811Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Termux是一个Android下一个高级的终端模拟器,开源且不需要root，支持apt管理软件包，十分方便安装软件包，完美支持Golang、Python、PHP、Ruby、Nodejs、MySQL等。随着智能设备的普及和性能的不断提升，如今的手机、平板等的硬件标准已达到了
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="golang开发环境" scheme="https://lingzhifeng.github.io/tags/golang%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="Termux" scheme="https://lingzhifeng.github.io/tags/Termux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>flag包命令行参数</title>
+    <link href="https://lingzhifeng.github.io/golang/flag-bao-ming-ling-xing-can-shu/"/>
+    <id>https://lingzhifeng.github.io/golang/flag-bao-ming-ling-xing-can-shu/</id>
+    <published>2020-05-17T02:51:55.000Z</published>
+    <updated>2020-05-17T03:02:01.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Go标准库flag包基础用法&quot;&gt;&lt;a href=&quot;#Go标准库flag包基础用法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="flag包" scheme="https://lingzhifeng.github.io/tags/flag%E5%8C%85/"/>
+    
+      <category term="命令行参数" scheme="https://lingzhifeng.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GO语言文件操作</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-wen-jian-cao-zuo/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-wen-jian-cao-zuo/</id>
+    <published>2020-05-17T01:51:20.000Z</published>
+    <updated>2020-05-17T01:53:40.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;打开和关闭文件&quot;&gt;&lt;a href=&quot;#打开和关闭文件&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="文件操作" scheme="https://lingzhifeng.github.io/tags/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GO语言包</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-bao/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-bao/</id>
+    <published>2020-05-17T00:51:28.000Z</published>
+    <updated>2020-05-17T01:14:37.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;定义包&quot;&gt;&lt;a href=&quot;#定义包&quot; class=&quot;headerlink&quot; title=&quot;定义包&quot;&gt;&lt;/a&gt;定义包&lt;/h3&gt;&lt;p&gt;我们还可以根据自己的需要创建自己的包。一个包可以简单理解为一个存放&lt;code&gt;.go&lt;/code&gt;文件的文件夹。
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="package" scheme="https://lingzhifeng.github.io/tags/package/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GO语言函数</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-han-shu/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-han-shu/</id>
+    <published>2020-05-17T00:18:39.000Z</published>
+    <updated>2020-05-17T01:03:24.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;函数是组织好的、可重复使用的、用于执行指定任务的代码块。Go语言中支持函数、匿名函数和闭包，并且函数在Go语言中属于“一等公民”。&lt;/p&gt;
+&lt;h3 id=&quot;函数定义：&quot;&gt;&lt;a href=&quot;#函数定义：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="函数" scheme="https://lingzhifeng.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fmt包</title>
+    <link href="https://lingzhifeng.github.io/golang/fmt-bao/"/>
+    <id>https://lingzhifeng.github.io/golang/fmt-bao/</id>
+    <published>2020-05-04T09:22:19.000Z</published>
+    <updated>2020-05-04T09:23:37.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;fmt标准库学习测试&quot;&gt;&lt;a href=&quot;#fmt标准库学习测试&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="fmt包" scheme="https://lingzhifeng.github.io/tags/fmt%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Time包</title>
+    <link href="https://lingzhifeng.github.io/golang/time-bao/"/>
+    <id>https://lingzhifeng.github.io/golang/time-bao/</id>
+    <published>2020-05-04T09:18:55.000Z</published>
+    <updated>2020-05-04T09:21:27.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;time包学习练习测试&quot;&gt;&lt;a href=&quot;#time包学习练习测试&quot; class=&quot;headerlink&quot; title=&quot;time包学习练习测试&quot;&gt;&lt;/a&gt;time包学习练习测试&lt;/h3&gt;&lt;h4 id=&quot;时间类型：time-Time&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="time包" scheme="https://lingzhifeng.github.io/tags/time%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言反射</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-fan-she/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-fan-she/</id>
+    <published>2020-04-28T07:10:51.000Z</published>
+    <updated>2020-04-28T08:09:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;先看官方Doc中Rob Pike给出的关于反射的定义：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Reflection in
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="反射" scheme="https://lingzhifeng.github.io/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>接口</title>
+    <link href="https://lingzhifeng.github.io/golang/jie-kou/"/>
+    <id>https://lingzhifeng.github.io/golang/jie-kou/</id>
+    <published>2020-04-22T14:43:07.000Z</published>
+    <updated>2020-04-22T14:48:52.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在Go语言中接口&lt;strong&gt;interface&lt;/strong&gt;是一种类型，一种抽象的类型。&lt;br&gt;interface是一组method的集合，是duck-type
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="接口" scheme="https://lingzhifeng.github.io/tags/%E6%8E%A5%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义类型 类型别名 结构体和json</title>
+    <link href="https://lingzhifeng.github.io/golang/zi-ding-yi-lei-xing-lei-xing-bie-ming-jie-gou-ti-he-json/"/>
+    <id>https://lingzhifeng.github.io/golang/zi-ding-yi-lei-xing-lei-xing-bie-ming-jie-gou-ti-he-json/</id>
+    <published>2020-04-22T13:30:07.000Z</published>
+    <updated>2020-04-22T13:42:25.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;类型别名和自定义类型&quot;&gt;&lt;a href=&quot;#类型别名和自定义类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="结构体" scheme="https://lingzhifeng.github.io/tags/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    
+      <category term="自定义类型" scheme="https://lingzhifeng.github.io/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%B1%BB%E5%9E%8B/"/>
+    
+      <category term="类型别名" scheme="https://lingzhifeng.github.io/tags/%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D/"/>
+    
+      <category term="json" scheme="https://lingzhifeng.github.io/tags/json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>指针和MAP类型</title>
+    <link href="https://lingzhifeng.github.io/golang/zhi-zhen-he-map-lei-xing/"/>
+    <id>https://lingzhifeng.github.io/golang/zhi-zhen-he-map-lei-xing/</id>
+    <published>2020-04-19T11:43:44.000Z</published>
+    <updated>2020-04-19T12:00:21.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;声明指针&quot;&gt;&lt;a href=&quot;#声明指针&quot; class=&quot;headerlink&quot; title=&quot;声明指针&quot;&gt;&lt;/a&gt;声明指针&lt;/h3&gt;&lt;p&gt;指针也是一种数据类型，也可以使用&lt;code&gt;var&lt;/code&gt;来声明：&lt;code&gt;var 变量名
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/tags/golang/"/>
+    
+      <category term="指针" scheme="https://lingzhifeng.github.io/tags/%E6%8C%87%E9%92%88/"/>
+    
+      <category term="map" scheme="https://lingzhifeng.github.io/tags/map/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言数据类型</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-shu-ju-lei-xing/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-shu-ju-lei-xing/</id>
+    <published>2020-03-06T10:11:09.000Z</published>
+    <updated>2020-03-06T10:15:05.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h3 id=&quot;整数&quot;&gt;&lt;a href=&quot;#整数&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="go语言数据类型" scheme="https://lingzhifeng.github.io/tags/go%E8%AF%AD%E8%A8%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言变量和常量</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-bian-liang-he-chang-liang/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-bian-liang-he-chang-liang/</id>
+    <published>2020-03-06T10:07:21.000Z</published>
+    <updated>2020-03-06T10:10:06.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;变量和常量&quot;&gt;&lt;a href=&quot;#变量和常量&quot; class=&quot;headerlink&quot; title=&quot;变量和常量&quot;&gt;&lt;/a&gt;变量和常量&lt;/h2&gt;&lt;h3 id=&quot;变量&quot;&gt;&lt;a href=&quot;#变量&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言变量" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80%E5%8F%98%E9%87%8F/"/>
+    
+      <category term="Go语言常量" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80%E5%B8%B8%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决go get下载包失败问题</title>
+    <link href="https://lingzhifeng.github.io/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/"/>
+    <id>https://lingzhifeng.github.io/golang/jie-jue-go-get-xia-zai-bao-shi-bai-wen-ti/</id>
+    <published>2020-03-02T16:39:05.000Z</published>
+    <updated>2020-03-02T16:43:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;解决go-get下载包失败问题&quot;&gt;&lt;a href=&quot;#解决go-get下载包失败问题&quot; class=&quot;headerlink&quot; title=&quot;解决go get下载包失败问题&quot;&gt;&lt;/a&gt;解决go
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="go get" scheme="https://lingzhifeng.github.io/tags/go-get/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go变量和变量类型</title>
+    <link href="https://lingzhifeng.github.io/golang/go-bian-liang-he-bian-liang-lei-xing/"/>
+    <id>https://lingzhifeng.github.io/golang/go-bian-liang-he-bian-liang-lei-xing/</id>
+    <published>2020-03-02T16:14:44.000Z</published>
+    <updated>2020-04-19T12:59:39.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;go中定义变量和变量类型：&quot;&gt;&lt;a href=&quot;#go中定义变量和变量类型：&quot; class=&quot;headerlink&quot; title=&quot;go中定义变量和变量类型：&quot;&gt;&lt;/a&gt;go中定义变量和变量类型：&lt;/h1&gt;&lt;h3 id=&quot;变量类型&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go流程控制</title>
+    <link href="https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/"/>
+    <id>https://lingzhifeng.github.io/golang/go-liu-cheng-kong-zhi/</id>
+    <published>2020-03-02T16:14:44.000Z</published>
+    <updated>2020-04-19T12:55:34.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Go语言基础之流程控制&quot;&gt;&lt;a href=&quot;#Go语言基础之流程控制&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言运算符</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-yun-suan-fu/</id>
+    <published>2020-03-02T11:36:13.000Z</published>
+    <updated>2020-03-02T12:35:17.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Go语言基础之运算符&quot;&gt;&lt;a href=&quot;#Go语言基础之运算符&quot; class=&quot;headerlink&quot; title=&quot;Go语言基础之运算符&quot;&gt;&lt;/a&gt;Go语言基础之运算符&lt;/h2&gt;&lt;p&gt;运算符用于在程序运行时执行数学或逻辑运算。&lt;/p&gt;
+&lt;p&gt;Go
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="Go运算符" scheme="https://lingzhifeng.github.io/tags/Go%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>晨星基金评级</title>
+    <link href="https://lingzhifeng.github.io/ji-jin/chen-xing-ji-jin-ping-ji/"/>
+    <id>https://lingzhifeng.github.io/ji-jin/chen-xing-ji-jin-ping-ji/</id>
+    <published>2020-03-01T06:47:54.000Z</published>
+    <updated>2020-03-01T08:03:51.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;晨星基金评级&quot;&gt;&lt;a href=&quot;#晨星基金评级&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="基金" scheme="https://lingzhifeng.github.io/categories/%E5%9F%BA%E9%87%91/"/>
+    
+    
+      <category term="基金" scheme="https://lingzhifeng.github.io/tags/%E5%9F%BA%E9%87%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言数组和切片</title>
+    <link href="https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/"/>
+    <id>https://lingzhifeng.github.io/golang/go-yu-yan-shu-zu-he-qie-pian/</id>
+    <published>2020-02-29T12:59:02.000Z</published>
+    <updated>2020-03-10T03:07:18.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数组学习和测试&quot;&gt;&lt;a href=&quot;#数组学习和测试&quot; class=&quot;headerlink&quot; title=&quot;数组学习和测试&quot;&gt;&lt;/a&gt;数组学习和测试&lt;/h2&gt;&lt;h3 id=&quot;声明数组&quot;&gt;&lt;a href=&quot;#声明数组&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="Go语言" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="Go语言数组" scheme="https://lingzhifeng.github.io/tags/Go%E8%AF%AD%E8%A8%80%E6%95%B0%E7%BB%84/"/>
+    
+      <category term="Go切片" scheme="https://lingzhifeng.github.io/tags/Go%E5%88%87%E7%89%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpaceVim官方文档</title>
+    <link href="https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/"/>
+    <id>https://lingzhifeng.github.io/golang/spacevim-guan-fang-wen-dang/</id>
+    <published>2020-02-19T17:26:21.000Z</published>
+    <updated>2020-03-12T19:31:36.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h2&gt;&lt;p&gt;该层用于golang开发。 它还提供了其他特定于语言的键映射。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/categories/golang/"/>
+    
+    
+      <category term="golang" scheme="https://lingzhifeng.github.io/tags/golang/"/>
+    
+      <category term="SpaceVim" scheme="https://lingzhifeng.github.io/tags/SpaceVim/"/>
+    
+      <category term="vim开发环境" scheme="https://lingzhifeng.github.io/tags/vim%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="go语言开发环境" scheme="https://lingzhifeng.github.io/tags/go%E8%AF%AD%E8%A8%80%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+</feed>

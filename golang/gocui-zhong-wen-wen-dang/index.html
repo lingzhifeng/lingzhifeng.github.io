@@ -1,0 +1,2160 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+    <!-- shw2018 洪卫  modify 2019.08.15-->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="gocui中文文档, So Cold , 好冷">
+    <meta name="baidu-site-verification" content="fmlEuI34ir" />
+    <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY" />
+    <meta name="description" content="package gocuiimport &#34;github.com/jroimartin/gocui&#34;软件包gocui允许创建控制台用户界面。创建一个新的GUI：
+g, err := gocui.NewGui(gocui.OutputNorma">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>gocui中文文档 | So Cold</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <style type="text/css">
+        
+            
+            code[class*="language-"],
+            pre[class*="language-"] {
+                white-space: pre !important;
+            }
+
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?46e79e71af0709a5b9106bf20cecc493";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+    <body>
+
+        <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">So Cold</span>
+                </a>
+            </div>
+            
+
+
+<!-- <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/AV" class="waves-effect waves-light">
+            
+            <i class="fa fa-music"></i>
+            
+            <span>视听</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/galleries" class="waves-effect waves-light">
+            
+            <i class="fa fa-photo"></i>
+            
+            <span>相册</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于我</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-envelope"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul> -->
+
+<!-- 支持二级菜单特性 洪卫 shw2018 modify 2019.09.17  -->
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right nav-menu">
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/" class="waves-effect waves-light">
+              
+                <i class="fa fa-home"></i>
+              
+              <span>首页</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/tags" class="waves-effect waves-light">
+              
+                <i class="fa fa-tags"></i>
+              
+              <span>标签</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/categories" class="waves-effect waves-light">
+              
+                <i class="fa fa-bookmark"></i>
+              
+              <span>分类</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/archives" class="waves-effect waves-light">
+              
+                <i class="fa fa-archive"></i>
+              
+              <span>归档</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/AV" class="waves-effect waves-light">
+              
+                <i class="fa fa-music"></i>
+              
+              <span>视听</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/galleries" class="waves-effect waves-light">
+              
+                <i class="fa fa-photo"></i>
+              
+              <span>相册</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/about" class="waves-effect waves-light">
+              
+                <i class="fa fa-user-circle-o"></i>
+              
+              <span>关于我</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/contact" class="waves-effect waves-light">
+              
+                <i class="fa fa-envelope"></i>
+              
+              <span>留言板</span>
+            </a>
+
+            
+      </li>
+    
+      <li class="hide-on-med-and-down nav-item" >
+
+        
+            <a href="/friends" class="waves-effect waves-light">
+              
+                <i class="fa fa-address-book"></i>
+              
+              <span>友情链接</span>
+            </a>
+
+            
+      </li>
+    
+
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">So Cold</div>
+        <div class="logo-desc">
+            
+            好冷 | So Cold | 好冷的博客
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/AV" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-music"></i>
+                
+                视听
+            </a>
+        </li>
+        
+        <li>
+            <a href="/galleries" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-photo"></i>
+                
+                相册
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于我
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-envelope"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://lingzhifeng.github.io/" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+
+   
+   
+<!-- 支持二级菜单特性 洪卫 shw2018 modify 2019.09.17  -->
+<!-- <ul class="menu-list mobile-menu-list">
+    
+        <li class="m-nav-item">
+                
+                    <a href="/" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-home"></i>
+                        
+                        首页
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/tags" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-tags"></i>
+                        
+                        标签
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/categories" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-bookmark"></i>
+                        
+                        分类
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/archives" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-archive"></i>
+                        
+                        归档
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/AV" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-music"></i>
+                        
+                        视听
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/galleries" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-photo"></i>
+                        
+                        相册
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/about" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-user-circle-o"></i>
+                        
+                        关于我
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/contact" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-envelope"></i>
+                        
+                        留言板
+                    </a>
+              
+            </li>
+        
+        <li class="m-nav-item">
+                
+                    <a href="/friends" class="waves-effect waves-light">
+                        
+                        <i class="fa fa-fw fa-address-book"></i>
+                        
+                        友情链接
+                    </a>
+              
+            </li>
+        
+
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://lingzhifeng.github.io/" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul> -->
+
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://lingzhifeng.github.io/" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+        
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        gocui中文文档
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- shw2018 洪卫  modify 2019.08.15-->
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Go%E8%AF%AD%E8%A8%80/" target="_blank">
+                                <span class="chip bg-color">Go语言</span>
+                            </a>
+                        
+                            <a href="/tags/golang/" target="_blank">
+                                <span class="chip bg-color">golang</span>
+                            </a>
+                        
+                            <a href="/tags/gocui/" target="_blank">
+                                <span class="chip bg-color">gocui</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%95%8C%E9%9D%A2/" target="_blank">
+                                <span class="chip bg-color">命令行界面</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/golang/" class="post-category" target="_blank">
+                                golang
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-01-20
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                        So Cold
+                    
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        3.7k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        17 分
+                    </div>
+                    
+                
+                
+                
+
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="package-gocui"><a href="#package-gocui" class="headerlink" title="package gocui"></a>package gocui</h2><p><code>import "github.com/jroimartin/gocui"</code><br>软件包gocui允许创建控制台用户界面。<br>创建一个新的GUI：</p>
+<pre class=" language-go"><code class="language-go">g<span class="token punctuation">,</span> err <span class="token operator">:=</span> gocui<span class="token punctuation">.</span><span class="token function">NewGui</span><span class="token punctuation">(</span>gocui<span class="token punctuation">.</span>OutputNormal<span class="token punctuation">)</span>
+<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 处理错误</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">defer</span> g<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// 设置GUI管理器和键绑定 </span>
+    <span class="token comment" spellcheck="true">// ...</span>
+
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">MainLoop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token operator">&amp;&amp;</span> err <span class="token operator">!=</span> gocui<span class="token punctuation">.</span>ErrQuit <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 处理错误</span>
+        <span class="token punctuation">}</span></code></pre>
+<p>设置GUI管理器：</p>
+<pre class=" language-go"><code class="language-go">g<span class="token punctuation">.</span><span class="token function">SetManager</span><span class="token punctuation">(</span>mgr1<span class="token punctuation">,</span> mgr2<span class="token punctuation">)</span></code></pre>
+<p>管理人员负责GUI的布局，并可用于构建小部件。 在GUI主循环的每次迭代中，将执行每个已配置管理器的Layout功能。 管理器用于设置和更新应用程序的主视图，可以在执行期间自由更改它们。 另外，重要的是要提到对每个报告的事件（按键，鼠标事件，窗口大小调整等）执行主循环迭代。</p>
+<p> GUI由视图组成，您可以将其视为缓冲区。 视图实现了io.ReadWriter接口，因此，如果您要修改它们的内容，则可以只写它们。 读取同样有效。</p>
+<p> 使用绝对坐标创建和初始化视图：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> v<span class="token punctuation">,</span> err <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">SetView</span><span class="token punctuation">(</span><span class="token string">"viewname"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> gocui<span class="token punctuation">.</span>ErrUnknownView <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 处理错误</span>
+    <span class="token punctuation">}</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Fprintln</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">"This is a new view"</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span></code></pre>
+<p>也可以使用相对坐标创建视图：</p>
+<pre class=" language-go"><code class="language-go">maxX<span class="token punctuation">,</span> maxY <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">Size</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> v<span class="token punctuation">,</span> err <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">SetView</span><span class="token punctuation">(</span><span class="token string">"viewname"</span><span class="token punctuation">,</span> maxX<span class="token operator">/</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">30</span><span class="token punctuation">,</span> maxY<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> maxX<span class="token operator">/</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">30</span><span class="token punctuation">,</span> maxY<span class="token operator">/</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+<span class="token punctuation">}</span></code></pre>
+<p>配置按键绑定：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> err <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">SetKeybinding</span><span class="token punctuation">(</span><span class="token string">"viewname"</span><span class="token punctuation">,</span> gocui<span class="token punctuation">.</span>KeyEnter<span class="token punctuation">,</span> gocui<span class="token punctuation">.</span>ModNone<span class="token punctuation">,</span> fcn<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 处理错误</span>
+<span class="token punctuation">}</span></code></pre>
+<p>gocui实现了对鼠标的完全支持，可以通过以下方式启用它：</p>
+<pre class=" language-go"><code class="language-go">g<span class="token punctuation">.</span>Mouse <span class="token operator">=</span> <span class="token boolean">true</span></code></pre>
+<p>鼠标事件的处理方式与其他任何键绑定一样：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">if</span> err <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">SetKeybinding</span><span class="token punctuation">(</span><span class="token string">"viewname"</span><span class="token punctuation">,</span> gocui<span class="token punctuation">.</span>MouseLeft<span class="token punctuation">,</span> gocui<span class="token punctuation">.</span>ModNone<span class="token punctuation">,</span> fcn<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 处理错误</span>
+<span class="token punctuation">}</span></code></pre>
+<p>重要信息：只能以三种方式创建，销毁或更新视图：从管理器中的Layout函数，从键绑定回调或通过<code>* Gui.Update（）</code>。 原因是它允许gocui是并发安全的。 因此，如果要从goroutine更新GUI，则必须使用<code>* Gui.Update（）</code>。 例如：</p>
+<pre class=" language-go"><code class="language-go">g<span class="token punctuation">.</span><span class="token function">Update</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span>g <span class="token operator">*</span>gocui<span class="token punctuation">.</span>Gui<span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+    v<span class="token punctuation">,</span> err <span class="token operator">:=</span> g<span class="token punctuation">.</span><span class="token function">View</span><span class="token punctuation">(</span><span class="token string">"viewname"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 处理错误</span>
+    <span class="token punctuation">}</span>
+    v<span class="token punctuation">.</span><span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Fprintln</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">"Writing from different goroutines"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+<p>默认情况下，gocui提供基本的编辑模式。 可以扩展和定制此模式，以创建新的编辑器并将其分配给<code>* View.Editor</code>：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> DefaultEditor Editor <span class="token operator">=</span> <span class="token function">EditorFunc</span><span class="token punctuation">(</span>simpleEditor<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">simpleEditor</span><span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">,</span> key Key<span class="token punctuation">,</span> ch <span class="token builtin">rune</span><span class="token punctuation">,</span> mod Modifier<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> ch <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> mod <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        v<span class="token punctuation">.</span><span class="token function">EditWrite</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+    <span class="token keyword">case</span> key <span class="token operator">==</span> KeySpace<span class="token punctuation">:</span>
+        v<span class="token punctuation">.</span><span class="token function">EditWrite</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+    <span class="token keyword">case</span> key <span class="token operator">==</span> KeyBackspace <span class="token operator">||</span> key <span class="token operator">==</span> KeyBackspace2<span class="token punctuation">:</span>
+        v<span class="token punctuation">.</span><span class="token function">EditDelete</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true">// ...</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>彩色文字：<br>视图允许使用ANSI颜色添加彩色文本。 例如：</p>
+<pre class=" language-go"><code class="language-go">fmt<span class="token punctuation">.</span><span class="token function">Fprintln</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">"\x1b[0;31mHello world"</span><span class="token punctuation">)</span></code></pre>
+<p>有关更多信息，请参见文件夹<code>_examples /</code>中的示例。</p>
+<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><h4 id="Constants-常数"><a href="#Constants-常数" class="headerlink" title="Constants(常数)"></a>Constants(常数)</h4><pre class=" language-go"><code class="language-go"><span class="token keyword">const</span> <span class="token punctuation">(</span>
+    ColorDefault Attribute <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorDefault<span class="token punctuation">)</span>
+    ColorBlack             <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorBlack<span class="token punctuation">)</span>
+    ColorRed               <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorRed<span class="token punctuation">)</span>
+    ColorGreen             <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorGreen<span class="token punctuation">)</span>
+    ColorYellow            <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorYellow<span class="token punctuation">)</span>
+    ColorBlue              <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorBlue<span class="token punctuation">)</span>
+    ColorMagenta           <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorMagenta<span class="token punctuation">)</span>
+    ColorCyan              <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorCyan<span class="token punctuation">)</span>
+    ColorWhite             <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ColorWhite<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<p>颜色属性：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">const</span> <span class="token punctuation">(</span>
+    AttrBold      Attribute <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>AttrBold<span class="token punctuation">)</span>
+    AttrUnderline           <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>AttrUnderline<span class="token punctuation">)</span>
+    AttrReverse             <span class="token operator">=</span> <span class="token function">Attribute</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>AttrReverse<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<p>文字样式属性：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">const</span> <span class="token punctuation">(</span>
+    <span class="token comment" spellcheck="true">// OutputNormal提供8色终端模式。</span>
+    OutputNormal <span class="token operator">=</span> <span class="token function">OutputMode</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>OutputNormal<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// Output256提供256色终端模式。</span>
+    Output256 <span class="token operator">=</span> <span class="token function">OutputMode</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>Output256<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<p>特殊键：</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">const</span> <span class="token punctuation">(</span>
+    KeyF1         Key <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF1<span class="token punctuation">)</span>
+    KeyF2             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF2<span class="token punctuation">)</span>
+    KeyF3             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF3<span class="token punctuation">)</span>
+    KeyF4             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF4<span class="token punctuation">)</span>
+    KeyF5             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF5<span class="token punctuation">)</span>
+    KeyF6             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF6<span class="token punctuation">)</span>
+    KeyF7             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF7<span class="token punctuation">)</span>
+    KeyF8             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF8<span class="token punctuation">)</span>
+    KeyF9             <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF9<span class="token punctuation">)</span>
+    KeyF10            <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF10<span class="token punctuation">)</span>
+    KeyF11            <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF11<span class="token punctuation">)</span>
+    KeyF12            <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyF12<span class="token punctuation">)</span>
+    KeyInsert         <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyInsert<span class="token punctuation">)</span>
+    KeyDelete         <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyDelete<span class="token punctuation">)</span>
+    KeyHome           <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyHome<span class="token punctuation">)</span>
+    KeyEnd            <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyEnd<span class="token punctuation">)</span>
+    KeyPgup           <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyPgup<span class="token punctuation">)</span>
+    KeyPgdn           <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyPgdn<span class="token punctuation">)</span>
+    KeyArrowUp        <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyArrowUp<span class="token punctuation">)</span>
+    KeyArrowDown      <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyArrowDown<span class="token punctuation">)</span>
+    KeyArrowLeft      <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyArrowLeft<span class="token punctuation">)</span>
+    KeyArrowRight     <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyArrowRight<span class="token punctuation">)</span>
+
+    MouseLeft      <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>MouseLeft<span class="token punctuation">)</span>
+    MouseMiddle    <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>MouseMiddle<span class="token punctuation">)</span>
+    MouseRight     <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>MouseRight<span class="token punctuation">)</span>
+    MouseRelease   <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>MouseRelease<span class="token punctuation">)</span>
+    MouseWheelUp   <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>MouseWheelUp<span class="token punctuation">)</span>
+    MouseWheelDown <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>MouseWheelDown<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<p>按键组合</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">const</span> <span class="token punctuation">(</span>
+    KeyCtrlTilde      Key <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlTilde<span class="token punctuation">)</span>
+    KeyCtrl2              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl2<span class="token punctuation">)</span>
+    KeyCtrlSpace          <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlSpace<span class="token punctuation">)</span>
+    KeyCtrlA              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlA<span class="token punctuation">)</span>
+    KeyCtrlB              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlB<span class="token punctuation">)</span>
+    KeyCtrlC              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlC<span class="token punctuation">)</span>
+    KeyCtrlD              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlD<span class="token punctuation">)</span>
+    KeyCtrlE              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlE<span class="token punctuation">)</span>
+    KeyCtrlF              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlF<span class="token punctuation">)</span>
+    KeyCtrlG              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlG<span class="token punctuation">)</span>
+    KeyBackspace          <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyBackspace<span class="token punctuation">)</span>
+    KeyCtrlH              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlH<span class="token punctuation">)</span>
+    KeyTab                <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyTab<span class="token punctuation">)</span>
+    KeyCtrlI              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlI<span class="token punctuation">)</span>
+    KeyCtrlJ              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlJ<span class="token punctuation">)</span>
+    KeyCtrlK              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlK<span class="token punctuation">)</span>
+    KeyCtrlL              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlL<span class="token punctuation">)</span>
+    KeyEnter              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyEnter<span class="token punctuation">)</span>
+    KeyCtrlM              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlM<span class="token punctuation">)</span>
+    KeyCtrlN              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlN<span class="token punctuation">)</span>
+    KeyCtrlO              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlO<span class="token punctuation">)</span>
+    KeyCtrlP              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlP<span class="token punctuation">)</span>
+    KeyCtrlQ              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlQ<span class="token punctuation">)</span>
+    KeyCtrlR              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlR<span class="token punctuation">)</span>
+    KeyCtrlS              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlS<span class="token punctuation">)</span>
+    KeyCtrlT              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlT<span class="token punctuation">)</span>
+    KeyCtrlU              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlU<span class="token punctuation">)</span>
+    KeyCtrlV              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlV<span class="token punctuation">)</span>
+    KeyCtrlW              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlW<span class="token punctuation">)</span>
+    KeyCtrlX              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlX<span class="token punctuation">)</span>
+    KeyCtrlY              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlY<span class="token punctuation">)</span>
+    KeyCtrlZ              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlZ<span class="token punctuation">)</span>
+    KeyEsc                <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyEsc<span class="token punctuation">)</span>
+    KeyCtrlLsqBracket     <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlLsqBracket<span class="token punctuation">)</span>
+    KeyCtrl3              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl3<span class="token punctuation">)</span>
+    KeyCtrl4              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl4<span class="token punctuation">)</span>
+    KeyCtrlBackslash      <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlBackslash<span class="token punctuation">)</span>
+    KeyCtrl5              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl5<span class="token punctuation">)</span>
+    KeyCtrlRsqBracket     <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlRsqBracket<span class="token punctuation">)</span>
+    KeyCtrl6              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl6<span class="token punctuation">)</span>
+    KeyCtrl7              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl7<span class="token punctuation">)</span>
+    KeyCtrlSlash          <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlSlash<span class="token punctuation">)</span>
+    KeyCtrlUnderscore     <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrlUnderscore<span class="token punctuation">)</span>
+    KeySpace              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeySpace<span class="token punctuation">)</span>
+    KeyBackspace2         <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyBackspace2<span class="token punctuation">)</span>
+    KeyCtrl8              <span class="token operator">=</span> <span class="token function">Key</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>KeyCtrl8<span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<h4 id="Variables（变量）"><a href="#Variables（变量）" class="headerlink" title="Variables（变量）"></a>Variables（变量）</h4><pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> <span class="token punctuation">(</span>
+    <span class="token comment" spellcheck="true">// ErrQuit用于确定MainLoop是否成功完成。</span>
+    ErrQuit <span class="token operator">=</span> errors<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token string">"quit"</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">// ErrUnknownView允许断言是否初始化了View。</span>
+    ErrUnknownView <span class="token operator">=</span> errors<span class="token punctuation">.</span><span class="token function">New</span><span class="token punctuation">(</span><span class="token string">"unknown view"</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span></code></pre>
+<h4 id="type-Attribute（类型属性）"><a href="#type-Attribute（类型属性）" class="headerlink" title="type Attribute（类型属性）"></a>type Attribute（类型属性）</h4><p>属性表示终端属性，例如颜色，字体样式等。可以使用按位或（|）进行组合。 请注意，不可能组合多个颜色属性。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> Attribute termbox<span class="token punctuation">.</span>Attribute</code></pre>
+<h4 id="type-Editor-类型编辑器）"><a href="#type-Editor-类型编辑器）" class="headerlink" title="type Editor(类型编辑器）"></a>type Editor(类型编辑器）</h4><p>gocui编辑器必须满足编辑器界面。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> Editor <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+    <span class="token function">Edit</span><span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">,</span> key Key<span class="token punctuation">,</span> ch <span class="token builtin">rune</span><span class="token punctuation">,</span> mod Modifier<span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<p>DefaultEditor是默认编辑器。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">var</span> DefaultEditor Editor <span class="token operator">=</span> <span class="token function">EditorFunc</span><span class="token punctuation">(</span>simpleEditor<span class="token punctuation">)</span></code></pre>
+<h4 id="type-EditorFunc-类型EditorFunc"><a href="#type-EditorFunc-类型EditorFunc" class="headerlink" title="type EditorFunc (类型EditorFunc)"></a>type EditorFunc (类型EditorFunc)</h4><p>EditorFunc类型是一个适配器，允许将普通功能用作编辑器。 如果f是具有适当签名的函数，则EditorFunc（f）是调用f的Editor对象。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> EditorFunc <span class="token keyword">func</span><span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">,</span> key Key<span class="token punctuation">,</span> ch <span class="token builtin">rune</span><span class="token punctuation">,</span> mod Modifier<span class="token punctuation">)</span></code></pre>
+<h5 id="func-f-EditorFunc-Edit-v-42-View-key-Key-ch-rune-mod-Modifier"><a href="#func-f-EditorFunc-Edit-v-42-View-key-Key-ch-rune-mod-Modifier" class="headerlink" title="func (f EditorFunc) Edit(v *View, key Key, ch rune, mod Modifier)"></a>func (f EditorFunc) Edit(v *View, key Key, ch rune, mod Modifier)</h5><p>编辑通话</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>f EditorFunc<span class="token punctuation">)</span> <span class="token function">Edit</span><span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">,</span> key Key<span class="token punctuation">,</span> ch <span class="token builtin">rune</span><span class="token punctuation">,</span> mod Modifier<span class="token punctuation">)</span></code></pre>
+<h4 id="type-Gui"><a href="#type-Gui" class="headerlink" title="type Gui"></a>type Gui</h4><p>Gui代表整个用户界面，包括视图，布局和键绑定。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> Gui <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">// BgColor和FgColor允许配置GUI的背景和前景色。</span>
+    BgColor<span class="token punctuation">,</span> FgColor Attribute
+
+    <span class="token comment" spellcheck="true">//SelBgColor和SelFgColor允许配置当前视图框架的背景和前景色。</span>
+    SelBgColor<span class="token punctuation">,</span> SelFgColor Attribute
+
+    <span class="token comment" spellcheck="true">// 如果“高光”为true，则将使用Sel {Bg，Fg} Colors绘制当前视图的框架。</span>
+    Highlight <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果Cursor为true，则启用光标。</span>
+    Cursor <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果Mouse为true，则将启用鼠标事件。</span>
+    Mouse <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果InputEsc为true，则当ESC序列在缓冲区中并且与任何已知序列都不匹配时，ESC表示KeyEsc。</span>
+    InputEsc <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果ASCII为true，则使用ASCII代替unicode绘制界面。 使用ASCII更可移植。</span>
+    ASCII <span class="token builtin">bool</span>
+    <span class="token comment" spellcheck="true">//包含已过滤或未导出的字段</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="func-NewGui-mode-OutputMode-42-Gui-error"><a href="#func-NewGui-mode-OutputMode-42-Gui-error" class="headerlink" title="func NewGui(mode OutputMode) (*Gui, error)"></a>func NewGui(mode OutputMode) (*Gui, error)</h5><p>NewGui返回具有给定输出模式的新Gui对象。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token function">NewGui</span><span class="token punctuation">(</span>mode OutputMode<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>Gui<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-Close"><a href="#func-g-42-Gui-Close" class="headerlink" title="func (g *Gui) Close()"></a>func (g *Gui) Close()</h5><p>关闭完成库。 在成功初始化之后并且不再需要gocui时应调用它。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-CurrentView-42-View"><a href="#func-g-42-Gui-CurrentView-42-View" class="headerlink" title="func (g *Gui) CurrentView() *View"></a>func (g *Gui) CurrentView() *View</h5><p>CurrentView返回当前焦点视图，如果没有视图拥有焦点，则返回nil。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">CurrentView</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>View</code></pre>
+<h5 id="func-g-42-Gui-DeleteKeybinding-viewname-string-key-interface-mod-Modifier-error"><a href="#func-g-42-Gui-DeleteKeybinding-viewname-string-key-interface-mod-Modifier-error" class="headerlink" title="func (g *Gui) DeleteKeybinding(viewname string, key interface{}, mod Modifier) error"></a>func (g *Gui) DeleteKeybinding(viewname string, key interface{}, mod Modifier) error</h5><p>func (*Gui) DeleteKeybinding(删除绑定键）<br>DeleteKeybinding删除一个键绑定。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">DeleteKeybinding</span><span class="token punctuation">(</span>viewname <span class="token builtin">string</span><span class="token punctuation">,</span> key <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> mod Modifier<span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-g-42-Gui-DeleteKeybindings-viewname-string"><a href="#func-g-42-Gui-DeleteKeybindings-viewname-string" class="headerlink" title="func (g *Gui) DeleteKeybindings(viewname string)"></a>func (g *Gui) DeleteKeybindings(viewname string)</h5><p>删除键绑定删除视图的所有键绑定。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">DeleteKeybindings</span><span class="token punctuation">(</span>viewname <span class="token builtin">string</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-DeleteView-name-string-error"><a href="#func-g-42-Gui-DeleteView-name-string-error" class="headerlink" title="func (g *Gui) DeleteView(name string) error"></a>func (g *Gui) DeleteView(name string) error</h5><p>DeleteView按名称删除视图。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">DeleteView</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-g-42-Gui-MainLoop-error"><a href="#func-g-42-Gui-MainLoop-error" class="headerlink" title="func (g *Gui) MainLoop() error"></a>func (g *Gui) MainLoop() error</h5><p>MainLoop运行主循环，直到返回错误。 成功完成后应返回ErrQuit。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">MainLoop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-g-42-Gui-Rune-x-y-int-rune-error"><a href="#func-g-42-Gui-Rune-x-y-int-rune-error" class="headerlink" title="func (g *Gui) Rune(x, y int) (rune, error)"></a>func (g *Gui) Rune(x, y int) (rune, error)</h5><p>符文返回给定位置的单元格中包含的符文。 它检查位置是否有效。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">Rune</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">rune</span><span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-SetCurrentView-name-string-42-View-error"><a href="#func-g-42-Gui-SetCurrentView-name-string-42-View-error" class="headerlink" title="func (g *Gui) SetCurrentView(name string) (*View, error)"></a>func (g *Gui) SetCurrentView(name string) (*View, error)</h5><p>SetCurrentView将焦点赋予给定视图。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetCurrentView</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>View<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-SetKeybinding-viewname-string-key-interface-mod-Modifier-handler-func-42-Gui-42-View-error-error"><a href="#func-g-42-Gui-SetKeybinding-viewname-string-key-interface-mod-Modifier-handler-func-42-Gui-42-View-error-error" class="headerlink" title="func (g *Gui) SetKeybinding(viewname string, key interface{}, mod Modifier, handler func(*Gui, *View) error) error"></a>func (g *Gui) SetKeybinding(viewname string, key interface{}, mod Modifier, handler func(*Gui, *View) error) error</h5><p>SetKeybinding创建一个新的键绑定。 如果viewname等于“”（空字符串），则绑定将应用于所有视图。 密钥必须是符文或密钥。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetKeybinding</span><span class="token punctuation">(</span>viewname <span class="token builtin">string</span><span class="token punctuation">,</span> key <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> mod Modifier<span class="token punctuation">,</span> handler <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token operator">*</span>Gui<span class="token punctuation">,</span> <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-g-42-Gui-SetManager-managers-…Manager"><a href="#func-g-42-Gui-SetManager-managers-…Manager" class="headerlink" title="func (g *Gui) SetManager(managers …Manager)"></a>func (g *Gui) SetManager(managers …Manager)</h5><p>SetManager设置给定的GUI管理器。 它将删除所有视图和键绑定。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetManager</span><span class="token punctuation">(</span>managers <span class="token operator">...</span>Manager<span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-SetManagerFunc-manager-func-42-Gui-error"><a href="#func-g-42-Gui-SetManagerFunc-manager-func-42-Gui-error" class="headerlink" title="func (g *Gui) SetManagerFunc(manager func(*Gui) error)"></a>func (g *Gui) SetManagerFunc(manager func(*Gui) error)</h5><p>SetManagerFunc设置给定的管理器功能。 它将删除所有视图和键绑定。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetManagerFunc</span><span class="token punctuation">(</span>manager <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-SetRune-x-y-int-ch-rune-fgColor-bgColor-Attribute-error"><a href="#func-g-42-Gui-SetRune-x-y-int-ch-rune-fgColor-bgColor-Attribute-error" class="headerlink" title="func (g *Gui) SetRune(x, y int, ch rune, fgColor, bgColor Attribute) error"></a>func (g *Gui) SetRune(x, y int, ch rune, fgColor, bgColor Attribute) error</h5><p>SetRune在相对于终端左上角的给定点写入一个符文。 它检查该位置是否有效并应用给定的颜色。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetRune</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">,</span> ch <span class="token builtin">rune</span><span class="token punctuation">,</span> fgColor<span class="token punctuation">,</span> bgColor Attribute<span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-g-42-Gui-SetView-name-string-x0-y0-x1-y1-int-42-View-error"><a href="#func-g-42-Gui-SetView-name-string-x0-y0-x1-y1-int-42-View-error" class="headerlink" title="func (g *Gui) SetView(name string, x0, y0, x1, y1 int) (*View, error)"></a>func (g *Gui) SetView(name string, x0, y0, x1, y1 int) (*View, error)</h5><p>SetView创建一个新视图，其左上角为（x0，y0），右下角为（x1，y1）。 如果已经存在相同名称的视图，则其尺寸将更新； 否则，返回错误ErrUnknownView，该错误允许断言View是否必须初始化。 它检查位置是否有效。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetView</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> x0<span class="token punctuation">,</span> y0<span class="token punctuation">,</span> x1<span class="token punctuation">,</span> y1 <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>View<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-SetViewOnBottom-name-string-42-View-error"><a href="#func-g-42-Gui-SetViewOnBottom-name-string-42-View-error" class="headerlink" title="func (g *Gui) SetViewOnBottom(name string) (*View, error)"></a>func (g *Gui) SetViewOnBottom(name string) (*View, error)</h5><p>SetViewOnBottom将给定视图设置在现有视图的底部。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetViewOnBottom</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>View<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-SetViewOnTop-name-string-42-View-error"><a href="#func-g-42-Gui-SetViewOnTop-name-string-42-View-error" class="headerlink" title="func (g *Gui) SetViewOnTop(name string) (*View, error)"></a>func (g *Gui) SetViewOnTop(name string) (*View, error)</h5><p>SetViewOnTop将给定视图设置在现有视图之上。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">SetViewOnTop</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>View<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-Size-x-y-int"><a href="#func-g-42-Gui-Size-x-y-int" class="headerlink" title="func (g *Gui) Size() (x, y int)"></a>func (g *Gui) Size() (x, y int)</h5><p>Size返回终端的大小。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">Size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-Update-f-func-42-Gui-error"><a href="#func-g-42-Gui-Update-f-func-42-Gui-error" class="headerlink" title="func (g *Gui) Update(f func(*Gui) error)"></a>func (g *Gui) Update(f func(*Gui) error)</h5><p>Update执行传递的函数。 可以从goroutine安全地调用此方法以更新GUI。 重要的是要注意，传递的函数不会立即执行，而是会添加到用户事件队列中。 鉴于Update产生了一个goroutine，因此不能保证处理用户事件的顺序。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">Update</span><span class="token punctuation">(</span>f <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-View-name-string-42-View-error"><a href="#func-g-42-Gui-View-name-string-42-View-error" class="headerlink" title="func (g *Gui) View(name string) (*View, error)"></a>func (g *Gui) View(name string) (*View, error)</h5><p>视图返回指向给定名称的视图的指针，如果不存在具有该名称的视图，则返回错误ErrUnknownView。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">View</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>View<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-ViewByPosition-x-y-int-42-View-error"><a href="#func-g-42-Gui-ViewByPosition-x-y-int-42-View-error" class="headerlink" title="func (g *Gui) ViewByPosition(x, y int) (*View, error)"></a>func (g *Gui) ViewByPosition(x, y int) (*View, error)</h5><p>ViewByPosition返回指向与给定位置匹配的视图的指针，如果该位置的视图不存在，则返回错误ErrUnknownView。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">ViewByPosition</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>View<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-ViewPosition-name-string-x0-y0-x1-y1-int-err-error"><a href="#func-g-42-Gui-ViewPosition-name-string-x0-y0-x1-y1-int-err-error" class="headerlink" title="func (g *Gui) ViewPosition(name string) (x0, y0, x1, y1 int, err error)"></a>func (g *Gui) ViewPosition(name string) (x0, y0, x1, y1 int, err error)</h5><p>ViewPosition返回具有给定名称的视图的坐标，如果不存在具有该名称的视图，则返回ErrUnknownView。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">ViewPosition</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>x0<span class="token punctuation">,</span> y0<span class="token punctuation">,</span> x1<span class="token punctuation">,</span> y1 <span class="token builtin">int</span><span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-g-42-Gui-Views-42-View"><a href="#func-g-42-Gui-Views-42-View" class="headerlink" title="func (g *Gui) Views() []*View"></a>func (g *Gui) Views() []*View</h5><p>视图返回GUI中的所有视图。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token function">Views</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">*</span>View</code></pre>
+<h4 id="type-Key"><a href="#type-Key" class="headerlink" title="type Key"></a>type Key</h4><p>键代表特殊键或组合键。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> Key termbox<span class="token punctuation">.</span>Key</code></pre>
+<h4 id="type-Manager"><a href="#type-Manager" class="headerlink" title="type Manager"></a>type Manager</h4><p>经理负责GUI的布局，可用于构建小部件。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> Manager <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 每次重新绘制GUI时都会调用布局，该布局必须包含基本视图及其初始化。</span>
+        <span class="token function">Layout</span><span class="token punctuation">(</span><span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token builtin">error</span>
+        <span class="token punctuation">}</span></code></pre>
+<h4 id="type-ManagerFunc"><a href="#type-ManagerFunc" class="headerlink" title="type ManagerFunc"></a>type ManagerFunc</h4><p>ManagerFunc类型是一种适配器，允许将普通功能用作Manager。 如果f是具有适当签名的函数，则ManagerFunc（f）是调用f的Manager对象。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> ManagerFunc <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-f-ManagerFunc-Layout-g-42-Gui-error"><a href="#func-f-ManagerFunc-Layout-g-42-Gui-error" class="headerlink" title="func (f ManagerFunc) Layout(g *Gui) error"></a>func (f ManagerFunc) Layout(g *Gui) error</h5><p>布局调用f（g）</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>f ManagerFunc<span class="token punctuation">)</span> <span class="token function">Layout</span><span class="token punctuation">(</span>g <span class="token operator">*</span>Gui<span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h4 id="type-Modifier"><a href="#type-Modifier" class="headerlink" title="type Modifier"></a>type Modifier</h4><p>修饰符允许定义特殊的按键组合。 定义新的键绑定时，可以将它们与“键”或“符文”结合使用。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> Modifier termbox<span class="token punctuation">.</span>Modifier</code></pre>
+<p>修饰符。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">const</span> <span class="token punctuation">(</span>
+    ModNone Modifier <span class="token operator">=</span> <span class="token function">Modifier</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    ModAlt           <span class="token operator">=</span> <span class="token function">Modifier</span><span class="token punctuation">(</span>termbox<span class="token punctuation">.</span>ModAlt<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span></code></pre>
+<h4 id="type-OutputMode"><a href="#type-OutputMode" class="headerlink" title="type OutputMode"></a>type OutputMode</h4><p>OutputMode表示终端的输出模式（8或256色）。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> OutputMode termbox<span class="token punctuation">.</span>OutputMode</code></pre>
+<h4 id="type-View"><a href="#type-View" class="headerlink" title="type View"></a>type View</h4><p>视图是一个窗口。 它维护自己的内部缓冲区和光标位置。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">type</span> View <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// BgColor和FgColor允许配置视图的背景和前景色。</span>
+    BgColor<span class="token punctuation">,</span> FgColor Attribute
+
+    <span class="token comment" spellcheck="true">// SelBgColor和SelFgColor用于配置选定线的突出显示时的背景色和前景色。</span>
+    SelBgColor<span class="token punctuation">,</span> SelFgColor Attribute
+
+    <span class="token comment" spellcheck="true">// 如果Editable为true，则击键将添加到视图的内部缓冲区的光标位置。</span>
+    Editable <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 编辑器允许定义管理版本模式的编辑器，包括键绑定或光标行为。 默认情况下使用DefaultEditor。</span>
+    Editor Editor
+
+    <span class="token comment" spellcheck="true">// 覆盖启用或禁用视图的覆盖模式。</span>
+    Overwrite <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果“高光”为true，则Sel {Bg，Fg} Colors将用于光标位置下方的行。</span>
+    Highlight <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果Frame为true，则将在视图周围绘制边框。</span>
+    Frame <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果Wrap为true，则写入到此View的内容长于其宽度时将自动进行包装。 如果为true，则将忽略视图的x起点。</span>
+    Wrap <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果Autoscroll为true，则在文本溢出时，视图将自动向下滚动。 如果为true，则将忽略视图的y起点。</span>
+    Autoscroll <span class="token builtin">bool</span>
+
+    <span class="token comment" spellcheck="true">// 如果Frame为true，则Title可以为视图配置标题。</span>
+    Title <span class="token builtin">string</span>
+
+    <span class="token comment" spellcheck="true">// 如果Mask为true，则View将显示遮罩而不是实际内容</span>
+    Mask <span class="token builtin">rune</span>
+
+    <span class="token comment" spellcheck="true">// 包含过滤或未导出的字段</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="func-v-42-View-Buffer-string"><a href="#func-v-42-View-Buffer-string" class="headerlink" title="func (v *View) Buffer() string"></a>func (v *View) Buffer() string</h5><p>Buffer返回一个字符串，其中包含视图内部缓冲区的内容。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Buffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<h5 id="func-v-42-View-BufferLines-string"><a href="#func-v-42-View-BufferLines-string" class="headerlink" title="func (v *View) BufferLines() []string"></a>func (v *View) BufferLines() []string</h5><p>BufferLines返回视图内部缓冲区中的行。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">BufferLines</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<h5 id="func-v-42-View-Clear"><a href="#func-v-42-View-Clear" class="headerlink" title="func (v *View) Clear()"></a>func (v *View) Clear()</h5><p>清除清空视图的内部缓冲区。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-Cursor-x-y-int"><a href="#func-v-42-View-Cursor-x-y-int" class="headerlink" title="func (v *View) Cursor() (x, y int)"></a>func (v *View) Cursor() (x, y int)</h5><p>光标返回视图的光标位置。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Cursor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-EditDelete-back-bool"><a href="#func-v-42-View-EditDelete-back-bool" class="headerlink" title="func (v *View) EditDelete(back bool)"></a>func (v *View) EditDelete(back bool)</h5><p>EditDelete删除光标位置的符文。 back确定方向。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">EditDelete</span><span class="token punctuation">(</span>back <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-EditNewLine"><a href="#func-v-42-View-EditNewLine" class="headerlink" title="func (v *View) EditNewLine()"></a>func (v *View) EditNewLine()</h5><p>EditNewLine在光标下插入新行。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">EditWrite</span><span class="token punctuation">(</span>ch <span class="token builtin">rune</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-EditWrite-ch-rune"><a href="#func-v-42-View-EditWrite-ch-rune" class="headerlink" title="func (v *View) EditWrite(ch rune)"></a>func (v *View) EditWrite(ch rune)</h5><p>EditWrite在光标位置写入一个符文。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">EditWrite</span><span class="token punctuation">(</span>ch <span class="token builtin">rune</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-Line-y-int-string-error"><a href="#func-v-42-View-Line-y-int-string-error" class="headerlink" title="func (v *View) Line(y int) (string, error)"></a>func (v *View) Line(y int) (string, error)</h5><p>Line返回一个字符串，该字符串的视图内部缓冲区的线位于与点（x，y）对应的位置。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Line</span><span class="token punctuation">(</span>y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-MoveCursor-dx-dy-int-writeMode-bool"><a href="#func-v-42-View-MoveCursor-dx-dy-int-writeMode-bool" class="headerlink" title="func (v *View) MoveCursor(dx, dy int, writeMode bool)"></a>func (v *View) MoveCursor(dx, dy int, writeMode bool)</h5><p>MoveCursor会考虑线/视图的宽度来移动光标，并在必要时替换原点。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">MoveCursor</span><span class="token punctuation">(</span>dx<span class="token punctuation">,</span> dy <span class="token builtin">int</span><span class="token punctuation">,</span> writeMode <span class="token builtin">bool</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-Name-string"><a href="#func-v-42-View-Name-string" class="headerlink" title="func (v *View) Name() string"></a>func (v *View) Name() string</h5><p>名称返回视图的名称。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span></code></pre>
+<h5 id="func-v-42-View-Origin-x-y-int"><a href="#func-v-42-View-Origin-x-y-int" class="headerlink" title="func (v *View) Origin() (x, y int)"></a>func (v *View) Origin() (x, y int)</h5><p>原点返回视图的原点位置。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Origin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-Read-p-byte-n-int-err-error"><a href="#func-v-42-View-Read-p-byte-n-int-err-error" class="headerlink" title="func (v *View) Read(p []byte) (n int, err error)"></a>func (v *View) Read(p []byte) (n int, err error)</h5><p>读取将数据读入p。 它返回读入p的字节数。 在EOF，err将为io.EOF。 在Rewind（）之后调用Read（）可使高速缓存用视图的内容刷新。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Read</span><span class="token punctuation">(</span>p <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>n <span class="token builtin">int</span><span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-Rewind"><a href="#func-v-42-View-Rewind" class="headerlink" title="func (v *View) Rewind()"></a>func (v *View) Rewind()</h5><p>Rewind将下一个Read的偏移量设置为0，这也会刷新read缓存。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Rewind</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-SetCursor-x-y-int-error"><a href="#func-v-42-View-SetCursor-x-y-int-error" class="headerlink" title="func (v *View) SetCursor(x, y int) error"></a>func (v *View) SetCursor(x, y int) error</h5><p>SetCursor设置视图在给定点相对于视图的光标位置。 它检查位置是否有效。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">SetCursor</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-v-42-View-SetOrigin-x-y-int-error"><a href="#func-v-42-View-SetOrigin-x-y-int-error" class="headerlink" title="func (v *View) SetOrigin(x, y int) error"></a>func (v *View) SetOrigin(x, y int) error</h5><p>SetOrigin设置视图内部缓冲区的原点位置，因此从此点开始打印缓冲区，这意味着它已与原点连接。 它可以用于仅通过增加和减少ox和oy来实现水平和垂直滚动。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">SetOrigin</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">error</span></code></pre>
+<h5 id="func-v-42-View-Size-x-y-int"><a href="#func-v-42-View-Size-x-y-int" class="headerlink" title="func (v *View) Size() (x, y int)"></a>func (v *View) Size() (x, y int)</h5><p>大小返回视图中可见列和行的数量。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-ViewBuffer-string"><a href="#func-v-42-View-ViewBuffer-string" class="headerlink" title="func (v *View) ViewBuffer() string"></a>func (v *View) ViewBuffer() string</h5><p>ViewBuffer返回一个字符串，其中包含显示给用户的视图缓冲区的内容。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">ViewBufferLines</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<h5 id="func-v-42-View-ViewBufferLines-string"><a href="#func-v-42-View-ViewBufferLines-string" class="headerlink" title="func (v *View) ViewBufferLines() []string"></a>func (v *View) ViewBufferLines() []string</h5><p>ViewBufferLines返回视图的内部缓冲区中显示给用户的行。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">ViewBufferLines</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span></code></pre>
+<h5 id="func-v-42-View-Word-x-y-int-string-error"><a href="#func-v-42-View-Word-x-y-int-string-error" class="headerlink" title="func (v *View) Word(x, y int) (string, error)"></a>func (v *View) Word(x, y int) (string, error)</h5><p>Word返回一个字符串，该字符串的视图内部缓冲区的单词位于与点（x，y）对应的位置。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Word</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<h5 id="func-v-42-View-Write-p-byte-n-int-err-error"><a href="#func-v-42-View-Write-p-byte-n-int-err-error" class="headerlink" title="func (v *View) Write(p []byte) (n int, err error)"></a>func (v *View) Write(p []byte) (n int, err error)</h5><p>写操作将字节切片追加到视图的内部缓冲区中。 由于View实现io.Writer接口，因此可以将其作为fmt.Fprintf，fmt.Fprintln，io.Copy等函数的参数传递。必须调用Clear来清除视图的缓冲区。</p>
+<pre class=" language-go"><code class="language-go"><span class="token keyword">func</span> <span class="token punctuation">(</span>v <span class="token operator">*</span>View<span class="token punctuation">)</span> <span class="token function">Write</span><span class="token punctuation">(</span>p <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>n <span class="token builtin">int</span><span class="token punctuation">,</span> err <span class="token builtin">error</span><span class="token punctuation">)</span></code></pre>
+<blockquote>
+<p>gocui 是一个 Go 语言用来开发控制台应用的 UI 工具包。手工翻译自GoDoc，如有错误，欢迎及时提出。致谢～～<br>GoDoc: <a href="https://github.com/jroimartin/gocui">https://github.com/jroimartin/gocui</a><br>项目地址： <a href="https://github.com/jroimartin/gocui">https://github.com/jroimartin/gocui</a></p>
+</blockquote>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+            </div>
+            <hr/>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力!</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+            
+            
+            <div class="reprint1">
+                <p>
+                    <span class="reprint1-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="https://lingzhifeng.github.io" class="b-link-green">So Cold</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/golang/gocui-zhong-wen-wen-dang/" class="b-link-green">gocui中文文档</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+        clientSecret: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+        repo: 'shw2018.github.io',
+        owner: 'shw2018',
+        admin: ["shw2018"],
+        id: 'golang/gocui-zhong-wen-wen-dang/',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+    /* valine 评论框增加背景图片 */
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("") 100% 100% no-repeat;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    /* 修复评论第一行位置错位 */
+    .v .vlist .vcard {
+    padding-top: 2.5em !important ;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="/libs//libs/jQuery-emoji/dist/css/jquery.emoji.css">
+<script src="/libs//libs/jQuery-emoji/dist/js/jquery.emoji.min.js"></script>
+<script src="/libs//libs/jQuery-emoji/dist/js/emoji.list.js"></script> -->
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'XXXXXXXXXXXXXXXXXXXXXXXX',
+        appKey: 'XXXXXXXXXXXXXXXXXXXXXX',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go',
+
+    });
+
+//     function parse_emoji() {
+//     jQuery(".vcontent").emojiParse({
+//       basePath: '/libs/jQuery-emoji/images/emoji',
+//       icons: emojiLists   // 注：详见 js/emoji.list.js
+//     });
+//   }
+  
+//   setTimeout(function() {
+//     // jQuery emoji 解析
+//     parse_emoji();
+//     // jquery emoji 初始化
+//     jQuery(".veditor").emoji({
+//       showTab: true,
+//       animation: 'slide',
+//       basePath: '/libs/jQuery-emoji/images/emoji',
+//       icons: emojiLists  // 注：详见 js/emoji.list.js
+//     });
+//     jQuery(".vmore").on("click", function() {
+//       setTimeout(function() {
+//         parse_emoji();
+//       }, 500);
+//     });
+//   }, 800)
+
+</script>
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/hexo/hexo-github-da-jian-jiao-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Hexo+Github搭建教程">
+                        
+                        <span class="card-title">Hexo+Github搭建教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Hexo和Github的搭建hexo的初级搭建还有部署到github page上，以及个人域名的绑定。
+Hexo搭建步骤
+安装Git
+安装Node.js
+安装Hexo
+GitHub创建个人仓库
+生成SSH添加到GitHub
+将hexo部署到
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo/" class="post-category" target="_blank">
+                                    Hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Github/" target="_blank">
+                        <span class="chip bg-color">Github</span>
+                    </a>
+                    
+                    <a href="/tags/blog/" target="_blank">
+                        <span class="chip bg-color">blog</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%85%8D%E8%B4%B9%E5%8D%9A%E5%AE%A2/" target="_blank">
+                        <span class="chip bg-color">免费博客</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/hexo/markdow-yu-fa-jiao-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="markdow语法教程">
+                        
+                        <span class="card-title">markdow语法教程</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Hexo+Material主题配置测试markdown的标题写法一到六级标题写法标题用“#+空格”来写，一级标题一个#号，二级标题##，最多支持六级标题。一点要记得在#后面加上一个空格。代码如下：
+# 一级标题
+## 二级标题
+### 三级
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-01-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo/" class="post-category" target="_blank">
+                                    Hexo
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/markdow/" target="_blank">
+                        <span class="chip bg-color">markdow</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Material/" target="_blank">
+                        <span class="chip bg-color">Material</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo%E4%B8%BB%E9%A2%98/" target="_blank">
+                        <span class="chip bg-color">Hexo主题</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: So Cold<br />'
+            + '作者: So Cold<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4, h5'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4, h5').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+        <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&copy;2019 好冷(So Cold). 
+
+            <br>
+            <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
+            <br>
+
+            
+
+            
+
+            
+                &nbsp; | &nbsp;字数统计:&nbsp;
+                <span class="white-color">70.4k</span> 字
+            
+
+            
+            <br>
+
+        </div>
+
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/lingzhifeng" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+ 
+    <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=1076772833@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=1076772833&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的QQ空间" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+
+        var t1 = Date.UTC(2019, 08, 10, 00, 00, 00); //北京时间2019-8-1 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
+            minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已勉强运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours +
+            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒" ;
+    } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+
+
+
+
+
+        <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+        <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+        <script src="/libs/materialize/materialize.min.js"></script>
+        <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+        <script src="/libs/aos/aos.js"></script>
+        <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+        <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+        <script src="/js/matery.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+        
+
+        
+
+        <!-- 洪卫 shw2018 add 2019.08.28 -->
+        <script type="text/javascript">
+            var OriginTitile = document.title,
+                st;
+            document.addEventListener("visibilitychange", function () {
+                document.hidden ? (document.title = "看不见我🙈~看不见我🙈~", clearTimeout(st)) : (document.title =
+                    "(๑•̀ㅂ•́) ✧被发现了～", st = setTimeout(function () {
+                        document.title = OriginTitile
+                    }, 3e3))
+            })
+        </script>
+
+        <!-- 鼠标点击烟花爆炸效果  洪卫 shw2018 add 2019.09.09 -->
+        
+
+        <!-- 背景雪花飘落特效洪卫 shw2018 add 2019.09.10 -->
+        
+
+        <!-- 鼠标点击文字特效 洪卫 shw2018 add 2019.09.10-->
+        
+
+        <!-- 背景雪花飘落特效 洪卫 shw2018 add 2019.09.10 -->
+        
+
+        <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->
+        
+            <script src="//code.tidio.co/xxxxxxxxxxxxxxxxxxxxxxxxxxx.js"></script>
+            <!--  在线聊天位置自定义  洪卫 shw2018 add 2019.09.13  -->
+            <script> 
+                $(document).ready(function () {
+
+                    setInterval(change_Tidio, 50);  
+                    function change_Tidio() { 
+
+                        var tidio=$("#tidio-chat iframe");
+                        if(tidio.css("display")=="block"&& $(window).width()>977 ){
+                            document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"80px":"20px";   
+                            document.getElementById("tidio-chat-iframe").style.right="-15px";   
+                            document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
+                            document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        } 
+                        else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
+                            document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;   
+                            document.getElementById("tidio-chat-iframe").style.right="-15px"; 
+                            document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        }
+                        else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
+                            document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;   
+                            document.getElementById("tidio-chat-iframe").style.zIndex="997";
+                        }
+
+                        if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
+                            document.getElementById("tidio-chat-iframe").style.zIndex="998";
+                        }
+                    } 
+                }); 
+            </script>
+        
+
+        <!-- 背景 canvas-nest  洪卫 shw 2018  add 2019.09.15-->
+        
+
+        <!-- 背景静止彩带  洪卫 shw 2018  add 2019.09.15-->
+        
+
+        <!-- 背景动态彩带 洪卫 shw 2018  add 2019.09.15-->
+        
+
+    </body>
+</html>
